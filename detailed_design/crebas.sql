@@ -1,3 +1,9 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     2021/11/21 19:01:08                          */
+/*==============================================================*/
+
+
 drop table if exists Book;
 
 drop table if exists BookReport;
@@ -34,7 +40,7 @@ create table Book
    primary key (BookId)
 );
 
-alter table Book comment 'ä¸Šæ¶çš„æ‰€æœ‰äºŒæ‰‹ä¹¦æœ¬çš„ä¿¡æ¯è¡¨';
+alter table Book comment 'ÉÏ¼ÜµÄËùÓĞ¶şÊÖÊé±¾µÄĞÅÏ¢±í';
 
 /*==============================================================*/
 /* Table: BookReport                                            */
@@ -73,7 +79,7 @@ create table Message
    primary key (MessageId)
 );
 
-alter table Message comment 'å–å®¶ä¹°å®¶äº¤æµæ¶ˆæ¯è®°å½•è¡¨';
+alter table Message comment 'Âô¼ÒÂò¼Ò½»Á÷ÏûÏ¢¼ÇÂ¼±í';
 
 /*==============================================================*/
 /* Table: Orders                                                */
@@ -90,7 +96,7 @@ create table Orders
    primary key (OrderId)
 );
 
-alter table Orders comment 'æ¯ä¸€æ¬¡äº¤æ˜“çš„è®¢å•çš„ç›¸å…³ä¿¡æ¯è¡¨';
+alter table Orders comment 'Ã¿Ò»´Î½»Ò×µÄ¶©µ¥µÄÏà¹ØĞÅÏ¢±í';
 
 /*==============================================================*/
 /* Table: User                                                  */
@@ -108,7 +114,7 @@ create table User
    primary key (UserId)
 );
 
-alter table User comment 'æ¯æ¬¡ç™»å½•ï¼Œæ³¨å†Œæ—¶éœ€è¦çš„ä¿¡æ¯è¡¨';
+alter table User comment 'Ã¿´ÎµÇÂ¼£¬×¢²áÊ±ĞèÒªµÄĞÅÏ¢±í';
 
 /*==============================================================*/
 /* Table: UserReport                                            */
@@ -121,3 +127,4 @@ create table UserReport
    State                varchar(100),
    primary key (URptId)
 );
+
