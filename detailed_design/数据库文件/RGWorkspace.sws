@@ -4,7 +4,8 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{D37DFD9D-E90B-4171-8992-AD170D86F09D}" Name="ruang" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="数据库.pdm"/>
+		<Model Expanded="Yes" ID="{D37DFD9D-E90B-4171-8992-AD170D86F09D}" Name="ruang" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="数据库.pdm"/>
+		<Model Expanded="Yes" ID="{D37DFD9D-E90B-4171-8992-AD170D86F09D}" Name="ruang" OpenedReadOnly="Yes" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="数据库.pdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
