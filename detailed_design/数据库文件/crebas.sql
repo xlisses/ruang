@@ -1,3 +1,9 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     2021/11/21 19:01:08                          */
+/*==============================================================*/
+
+
 drop table if exists Book;
 
 drop table if exists BookReport;
@@ -121,3 +127,4 @@ create table UserReport
    State                varchar(100),
    primary key (URptId)
 );
+
