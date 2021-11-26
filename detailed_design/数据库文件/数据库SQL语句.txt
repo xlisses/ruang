@@ -101,10 +101,11 @@ create table User
    UserName             varchar(100),
    PhoneNum             varchar(100),
    StuNum               varchar(100),
-   State                varchar(100),
+   State                int,
    Pwd                  varchar(100),
    URptTimes            int,
    UserAddress          varchar(100),
+   Propeerty            int,
    primary key (UserId)
 );
 
