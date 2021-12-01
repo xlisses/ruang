@@ -1,0 +1,42 @@
+<view class="top_box">
+      <view class="top_1">
+            <view wx:if="{{!userinfo}}" class="top_1_1" bindtap="go" data-go="/pages/login/login">昵称</view>
+            <view wx:if="{{userinfo}}" class="top_1_1">
+                  <open-data type="userNickName"></open-data>
+            </view>
+            <view class="top_1_2" wx:if="{{!userinfo}}">手机号</view>
+             <view class="top_1_2" wx:if="{{userinfo}}" bindtap="go" data-go="/pages/edit/edit" data-status="1">点击修改资料</view>
+      </view>
+      <view class="top_2">
+            <view class="avator">
+                  <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
+                  <image wx:if="{{!userinfo}}" src="/images/avator.png"></image>
+            </view>
+      </view>
+</view>
+
+<view class="bottom_box">
+      <view class="bottom_card" bindtap="go" data-go="/pages/dealur/dealur" data-status="1">
+            <view class="bottom_1">
+                  <image src="/images/userid.png"></image>
+                  <view>用户举报受理</view>
+            </view>
+            <image src="/images/go.png"></image>
+      </view>
+      <view class="bottom_card" bindtap="go" data-go="/pages/dealbr/dealbr" data-status="1">
+            <view class="bottom_1">
+                  <image src="/images/book.png"></image>
+                  <view>课本举报受理</view>
+            </view>
+            <image src="/images/go.png"></image>
+      </view>
+      <!-- <view class="bottom_card">
+            <view class="bottom_1">
+                  <image src="/images/help.png"></image>
+                  <view>意见反馈受理</view>
+            </view>
+            <image src="/images/go.png"></image>
+            <button open-type="feedback"></button>
+      </view> -->
+     
+</view>
