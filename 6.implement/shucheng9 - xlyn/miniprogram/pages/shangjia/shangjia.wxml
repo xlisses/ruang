@@ -1,0 +1,56 @@
+<!--pages/shangjia/shangjia.wxml-->
+
+
+<view class='bg' style="width: 750rpx; height: 60rpx; display: block; box-sizing: border-box;background-color: transparent;">
+
+<text  style="display: flex; text-align: center; justify-content: center; width: 750rpx; height: 59rpx; box-sizing: border-box; margin-top: 10px">上架商品信息</text>
+</view>
+
+<view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/user.png'></image>
+  <input class='input' bindinput='nameInput' placeholder='名称'></input>
+</view>
+
+<view class='line'></view>
+
+<view class='main row'>
+  <image class='left icon' src='/images/money.png'></image>
+ 
+ 
+  <input class='input' bindinput='priceInput' placeholder='价格'></input>
+</view>
+
+<view class='line'></view>
+
+<view class='main row'>
+  <image class='left icon' src='/images/list.png'></image>
+  <input class='input' bindinput='textInput' placeholder='介绍（作者，出版社等）'></input>
+</view>
+
+<view class='line'></view>
+
+<view class='main row' style="width: 750rpx; height: 99rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/school.png'></image>
+  <input class='input' bindinput='collegeInput' placeholder='学院'></input>
+</view>
+
+<view class='line' ></view>
+
+<view class='main row' style="width: 750rpx; height: 99rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/school.png'></image>
+  <input class='input' bindinput='SpecialityInput' placeholder='专业'></input>
+</view>
+<view class='line'></view>
+
+
+<view class='main row'>
+  <image class='left icon' src='/images/pic.png'></image>
+  
+  <button  bindtap='bokimg'  style="width: 317rpx; height: 92rpx; display: block; box-sizing: border-box; left: -177rpx; top: 26rpx; position: relative;background-color: rgb(197, 223, 224);"><text class="txt">上传图片</text></button>
+</view>
+
+
+
+<button class='sureBtn' type='primary' bindtap='sureTap' style="position: relative; left: 0rpx; top: 64rpx">确定上架</button>
+
+

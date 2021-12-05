@@ -1,0 +1,73 @@
+
+.list_box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+  font-size: 10rpx;
+}
+
+.blank_text {
+  padding-top: 40rpx;
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  color: #c6c6c8;
+}
+
+.qiugouitems{
+  width:100%;
+  height: 8rem;
+  background: #ffffff;
+  text-align:center;
+  display: grid;
+  grid-template-columns: 33% 64%;
+  grid-template-rows: 100% ;
+  
+  padding-left: 5px;
+  border-bottom: 1px solid #c9c1c1;
+}
+.qiugouimg{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.qiugouimg img{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  background-color: #ebe2e2;
+  
+}
+.qiugouinfo{
+  display: grid;
+  grid-template-columns: 95%;
+  grid-template-rows: 20% 50% 20% ;
+
+}
+.qiugouimg img{
+  src: url(https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg);
+}
+.qiugoubottom{
+  position: fixed;
+  display: flex;
+  float: left;
+  width: 80%;
+  bottom:10px;
+  justify-content: center;
+}
+.qiugoubottom .addqiugou{
+  width: 35%;
+  background-color: lightsalmon;
+  left: 30px;
+  font-size: 15px;
+  padding: 10px;
+  
+}
+.qiugoubottom .myqiugou{
+  width: 35%;
+  background-color: lightsalmon;
+  left: 40px;
+  font-size: 15px;
+  padding: 10px;
+}
