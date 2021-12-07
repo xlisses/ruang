@@ -10,7 +10,7 @@
       <view class="top_2">
             <view class="avator">
                   <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
-                  <image wx:if="{{!userinfo}}" src="/images/avator.png"></image>
+                  <image wx:if="{{!userinfo}}" src="cloud://shucheng-0gpblg8515636a51.7368-shucheng-0gpblg8515636a51-1308544228/头像1.jpg"></image>
             </view>
       </view>
 </view>
@@ -23,33 +23,37 @@
             </view>
             <image src="/images/go.png"></image>
       </view>
-      <view class="bottom_card" bindtap="go" data-go="/pages/kefu/kefu" data-status="1">
+      <view class="bottom_card" bindtap="Toaddress" data-go="/pages/kefu/kefu" data-status="1">
             <view class="bottom_1">
                   <image src="/images/address.png"></image>
                   <view>我的地址</view>
             </view>
             <image src="/images/go.png"></image>
       </view>
-      <view class="bottom_card">
+      <view class="bottom_card" bindtap="Tohelpcenter">
             <view class="bottom_1">
                   <image src="/images/help.png"></image>
                   <view>帮助中心</view>
             </view>
             <image src="/images/go.png"></image>
-            <button open-type="feedback"></button>
+            <button ></button>
       </view>
-      <view class="bottom_card" bindtap="showShare">
+      <view class="bottom_card" >
             <view class="bottom_1">
                   <image src="/images/advise.png"></image>
                   <view>意见反馈</view>
             </view>
             <image src="/images/go.png"></image>
       </view>
-      <view class="bottom_card" bindtap="go" data-go="/pages/about/about">
+      <view class="bottom_card" bindtap="Tous" data-go="/pages/about/about">
             <view class="bottom_1">
                   <image src="/images/about.png"></image>
                   <view>关于我们</view>
             </view>
             <image src="/images/go.png"></image>
       </view>
+</view>
+<view style="margin: 100rpx;">
+<button type="primary" bindtap="Tologin">退出登录
+</button>
 </view>

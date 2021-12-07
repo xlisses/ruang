@@ -78,14 +78,17 @@ Page({
                 State: 1
               }
             })
-            // wx.showToast({缺少计时器
-            //   title: '注册成功',
-            //   icon: 'loading',
-            //   duration: 1000
-            // })
-            wx.navigateTo({
-              url: '/pages/login/login',
-            })
+            wx.showModal({
+              title: '注册成功',
+              content: '注册成功',
+              showCancel: false,
+              success(res) {
+                wx.navigateTo({
+                  url: '/pages/login/login',
+                })
+              }
+            });
+
           }
         }
       })

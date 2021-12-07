@@ -4,7 +4,6 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -15,6 +14,26 @@ Page({
   bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  Tohelpcenter(){
+    wx.navigateTo({
+      url: 'helpcenter'
+    })
+  },
+Tous(){
+  wx.navigateTo({
+    url: 'us'
+  })
+},
+Tologin(){
+  wx.navigateTo({
+    url: '../login/login'
+  })
+},
+  Toaddress(){
+    wx.navigateTo({
+      url: 'myaddress'
     })
   },
   onLoad() {

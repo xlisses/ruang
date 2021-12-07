@@ -9,44 +9,44 @@
     </view>
     <view class="register-from" style="width: 568rpx; height: 673rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
         <!--学号-->
-        <view class="inputView">
-            <image class="nameImage" src="/images/userid.png"></image>
-            <label class="registerLab">学号</label>
-            <input class="inputText" placeholder="请输入学号" bindinput="useridInput" />
+        <view class="inputview">
+            <image class="nameimage" src="/images/userid.png"></image>
+            <label class="registerlab">学号</label>
+            <input class="inputtext" placeholder="请输入学号" bindinput="useridInput" />
         </view>
         <view class="line"></view>
         <!--密码-->
-        <view class="inputView">
-            <image class="keyImage" src="/images/password.png"></image>
-            <label class="registerLab">密码</label>
-            <input class="inputText"  placeholder="请输入密码" bindinput="passwordInput" />
+        <view class="inputview">
+            <image class="keyimage" src="/images/password.png"></image>
+            <label class="registerlab">密码</label>
+            <input class="inputtext"  placeholder="请输入密码" bindinput="passwordInput" />
         </view>
         <view class="line"></view>
         <!--昵称-->
-        <view class="inputView">
-            <image class="keyImage" src="/images/nickname.png"></image>
-            <label class="registerLab">昵称</label>
-            <input class="inputText" placeholder="请输入昵称" bindinput="nicknameInput" />
+        <view class="inputview">
+            <image class="keyimage" src="/images/nickname.png"></image>
+            <label class="registerlab">昵称</label>
+            <input class="inputtext" placeholder="请输入昵称" bindinput="nicknameInput" />
         </view>
         <view class="line"></view>
         <!--电话-->
-        <view class="inputView">
-            <image class="keyImage" src="/images/phone.png"></image>
-            <label class="registerLab">电话</label>
-            <input class="inputText"  placeholder="请输入电话" bindinput="phoneInput" />
+        <view class="inputview">
+            <image class="keyimage" src="/images/phone.png"></image>
+            <label class="registerlab">电话</label>
+            <input class="inputtext"  placeholder="请输入电话" bindinput="phoneInput" />
         </view>
         <view class="line"></view>
         <!--地址-->
-        <view class="inputView">
-            <image class="keyImage" src="/images/address.png"></image>
-            <label class="registerLab">地址</label>
-            <input class="inputText"  placeholder="请输入地址" bindinput="addressInput" />
+        <view class="inputview">
+            <image class="keyimage" src="/images/address.png"></image>
+            <label class="registerlab">地址</label>
+            <input class="inputtext"  placeholder="请输入地址" bindinput="addressInput" />
         </view>
     </view>
     <!--注册-->
-    <view class="registerBtnView"
+    <view class="registerbtnview"
         style="width: 619rpx; height: 106rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
-        <button class="registernBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        <button class="registernbtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
             disabled="{{disabled}}" bindtap="register"
             style="position: relative; left: -3rpx; top: -92rpx; width: 617rpx; height: 94rpx; display: block; box-sizing: border-box">注册</button>
     </view>

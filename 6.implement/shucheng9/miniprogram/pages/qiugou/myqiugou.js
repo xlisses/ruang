@@ -3,8 +3,8 @@ wx.cloud.init()
 const app = getApp()
 const db = wx.cloud.database()
 const qiugou = db.collection('book')
-const num=4
-var page=4
+const num=6
+var page=6
 Page({
 
   /**
@@ -18,11 +18,19 @@ Page({
       url: '/pages/qiugou/addqiugou'
     })
   },
+  Xiugai:function(params) {
+    wx.navigateTo({
+      url: '/pages/qiugou/xiugaiinfo'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    qiugou.limit(num).get({
+    var id=options.id
+    qiugou.where({
+      _openid:id
+    }).get({
       success: res=>{
         // res.data 包含该记录的数据
         console.log(res.data)

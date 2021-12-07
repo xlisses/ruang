@@ -1,3 +1,4 @@
+var app = getApp()
 Page({
   data: {
     list:[],
@@ -13,7 +14,8 @@ a: function () {
    
 },
 goumai: function(e){
-wx.navigateTo({
+
+  wx.navigateTo({
   url: '../buy/buy?id='+ e.currentTarget.dataset.id
 })
 },
@@ -32,8 +34,10 @@ wx.navigateTo({
 onLoad: function (options) {
   var that = this;
   const db = wx.cloud.database({env: "shucheng-0gpblg8515636a51"});
-  const cont = db.collection('book');
- 
+  const cont = db.collection('book')
+  .where({
+  Variety:0
+ })
 
   cont.get({
     //如果查询成功的话

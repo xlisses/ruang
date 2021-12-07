@@ -1,12 +1,11 @@
 <view class="list_box" style="background-color: rgb(200, 200, 200); width: 747rpx; height: 62rpx; display: block; box-sizing: border-box">
-      <view class="blank_text" style="width: 747rpx; height: 58rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
-            <view class="text" style="font-size: 20px; position: relative; left: -8rpx; top: 2rpx; text-align: center; color: black; width: 750rpx; height: 55rpx; display: block; box-sizing: border-box">购买</view>
+      <view class="blank_text" style="width: 747rpx; height: 58rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx;font-size: 25px; text-align: center;">购买
       </view>
       <image bindtap="changeCard" class="top_list" src="/images/xiaoxi.png" style="width: 87rpx; height: 80rpx; display: block; box-sizing: border-box; left: 624rpx; top: -69rpx; position: relative"></image>
 </view>
 
-<view class="find">
-  <view style="width: 750rpx; height: 85rpx; display: block; box-sizing: border-box">
+<view class="find" style="width: 747rpx; height: 62rpx; display: block; box-sizing: border-box">
+  <view style="width: 750rpx; height: 69rpx; display: block; box-sizing: border-box">
     <view class="weui-search-bar">
       <view class="weui-search-bar__form">
         <!-- 搜索框 -->
@@ -20,26 +19,31 @@
     </view>
   </view>
 </view>
-<view class="main" style="width: 747rpx; height: 255rpx; display: block; box-sizing: border-box">
-  <view class='mn' wx:for="{{list}}" wx:key="id" style="width: 750rpx; height: 248rpx; display: block; box-sizing: border-box">
+<!--无内容显示-->
+<view class="nocontent" wx:if="{{list.length==0}}">
+      <image lazy-load src=""></image>
+      <view class="blank_text">这里空空如也~</view>
+</view>
+<view class="main" wx:for="{{list}}" wx:key="id"   style="width: 747rpx; height: 244rpx; display: block; box-sizing: border-box">
+
     <view class="vw" bindtap='dtl' data-id="{{item._id}}" style="width: 743rpx; height: 239rpx; display: block; box-sizing: border-box; ">
       <view for=""  class="bokimg" style="width: 246rpx; height: 200rpx; display: block; box-sizing: border-box;background-color: black;">
       <image src="{{item.BookImg}}" style="width: 248rpx; height: 209rpx; display: inline-block; box-sizing: border-box"></image></view>
-      <view for="" class="bokname" style="position: relative; left: 272rpx; top: -193rpx; font-size: 20px">{{item.BookName}}</view>
+      <view for="" class="bokname" style="position: relative; left: 272rpx; top: -193rpx; font-size: 20px; width: 246rpx; height: 37rpx; display: block; box-sizing: border-box">{{item.BookName}}</view>
       
-      <view for="" class="price" style="position: relative; left: 293rpx; top: -141rpx">￥{{item.Price}}</view>
+      <view for="" class="price" style="position: relative; left: 272rpx; top: -141rpx; width: 246rpx; height: 46rpx; display: block; box-sizing: border-box">￥{{item.Price}}</view>
       
-      <view for="" class="usrname"  style="position: relative; left: 538rpx; top: -268rpx">{{item.UserName}}</view>
-      <button   bindtap ='goumai' style="position: relative; left: 226rpx; top: -248rpx; width: 153rpx; height: 71rpx; display: block; box-sizing: border-box">购买</button>
-      <view  for=""  class="stk"  style="position: relative; left: 538rpx; top: -199rpx; width: 743rpx; height: 37rpx; display: block; box-sizing: border-box">库存{{item.Stock}}</view>
-      <view  for=""  class="col"  style="position: relative; left: 272rpx; top: -236rpx">{{item.College}}</view>
+      <view for="" class="usrname"  style="position: relative; left: 538rpx; top: -276rpx; width: 153rpx; height: 46rpx; display: block; box-sizing: border-box;font-size: 20px;">{{item.UserName}}</view>
+      <button   bindtap ='goumai' data-id="{{item._id}}" style="position: relative; left: 243rpx; top: -244rpx; width: 153rpx; height: 71rpx; display: block; box-sizing: border-box">购买</button>
+      <view  for=""  class="stk"  style="position: relative; left: 524rpx; top: -230rpx; width: 130rpx; height: 46rpx; display: block; box-sizing: border-box">库存{{item.Stock}}</view>
+      <view  for=""  class="col"  style="position: relative; left: 272rpx; top: -276rpx; width: 153rpx; height: 37rpx; display: block; box-sizing: border-box">{{item.College}}</view>
       
-      <view  for=""  class="spe"  style="position: relative; left: 418rpx; top: -272rpx">{{item.Speciality}}</view>
+      <view  for=""  class="spe"  style="position: relative; left: 395rpx; top: -312rpx; width: 130rpx; height: 46rpx; display: block; box-sizing: border-box">{{item.Speciality}}</view>
     
      
    
    
   </view>
   <view class='line' style="width: 743rpx; height: 4rpx; display: block; box-sizing: border-box; background-color: black"></view>
-</view>
+
 </view>

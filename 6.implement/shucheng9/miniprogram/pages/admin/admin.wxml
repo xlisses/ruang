@@ -1,16 +1,15 @@
 <view class="top_box">
-      <view class="top_1">
-            <view wx:if="{{!userinfo}}" class="top_1_1" bindtap="go" data-go="/pages/login/login">昵称</view>
+      <view class="top_1" wx:for="{{list}}" wx:key="id">
+            <view class="top_1_1" bindtap="go" data-go="/pages/login/login">{{item.UserName}}</view>
             <view wx:if="{{userinfo}}" class="top_1_1">
                   <open-data type="userNickName"></open-data>
             </view>
-            <view class="top_1_2" wx:if="{{!userinfo}}">手机号</view>
-             <view class="top_1_2" wx:if="{{userinfo}}" bindtap="go" data-go="/pages/edit/edit" data-status="1">点击修改资料</view>
+            <view class="top_1_2">{{item.StuNum}}</view>
       </view>
       <view class="top_2">
             <view class="avator">
                   <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
-                  <image wx:if="{{!userinfo}}" src="/images/avator.png"></image>
+                  <image src="/images/avator.png"></image>
             </view>
       </view>
 </view>

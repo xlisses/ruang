@@ -1,0 +1,24 @@
+<view class="text" style="font-size: 20px; position: relative; left: -8rpx; top: 2rpx; text-align: center; color: black; width: 750rpx; height: 55rpx; display: block; box-sizing: border-box">我的订单</view>
+<view  class ='daohang' style="width: 747rpx; height: 55rpx; display: block; box-sizing: border-box">
+  <view  bindtap='nofin' style="width: 379rpx; height: 57rpx; display: block; box-sizing: border-box ;background-color: bisque; text-align: center;">未完成</view>
+  <view  bindtap='yesfin' style="width: 379rpx; height: 57rpx; display: block; box-sizing: border-box; position: relative; left: 379rpx; top: -57rpx;text-align: center;">已完成</view>
+</view>
+
+
+<view class="main" style="width: 747rpx; height: 255rpx; display: block; box-sizing: border-box">
+  <view class='mn' wx:for="{{list}}" wx:key="id" style="width: 750rpx; height: 248rpx; display: block; box-sizing: border-box">
+    <view class="vw" bindtap='dtl' data-id="{{item._id}}" style="width: 743rpx; height: 239rpx; display: block; box-sizing: border-box; ">
+      <view for=""  class="bokimg" style="width: 246rpx; height: 200rpx; display: block; box-sizing: border-box;background-color: black;">
+      <image src="{{item.BookImg}}" style="width: 248rpx; height: 209rpx; display: inline-block; box-sizing: border-box"></image></view>
+      <view for="" class="bokname" style="position: relative; left: 272rpx; top: -179rpx; font-size: 20px">{{item.BookName}}</view>
+      
+      <view for="" class="price" style="position: relative; left: 293rpx; top: -141rpx;font-size: 25px;">￥{{item.Price}}</view>
+      
+     
+      <button   bindtap ='shouhuo' type='primary' style="position: relative; left: 223rpx; top: -211rpx; width: 221rpx; height: 71rpx; display: block; box-sizing: border-box">确认收货</button>
+      
+   
+  </view>
+  <view class='line' style="width: 743rpx; height: 4rpx; display: block; box-sizing: border-box; background-color: black"></view>
+</view>
+</view>

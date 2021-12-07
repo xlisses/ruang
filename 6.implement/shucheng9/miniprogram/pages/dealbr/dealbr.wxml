@@ -1,0 +1,25 @@
+<wxs src="../../common.wxs" module="morejs" />
+<view class="list_box" style="background-color: rgb(200, 200, 200);">
+    <view class="blank_text"
+        style="width: 100%; height: 80rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+        <view class="text"
+            style="font-size: 20px; position: relative; left: 0rpx; top: -33rpx; text-align: center; color: black">
+            课本举报受理</view>
+    </view>
+</view>
+
+
+
+<view class="reportitems" wx:for="{{list}}" wx:key="id" bindtap='dtl' data-id="{{item._id}}">
+    <view class="reportimg">
+        <img src="/images/itembook.jpg" alt="详情" />
+    </view>
+    <view class="reportinfo">
+        <view class="reportname">
+            <view class="reportbookname" style="margin: 10px; font-size: 15px;">{{item.BookName}}</view>
+        </view>
+        <view
+            style="font-variant: normal left; margin: 10px; font-size: 35px; text-overflow: ellipsis; overflow: hidden; font-size: 11px;">
+            {{item.BookId}}</view>
+    </view>
+</view>
