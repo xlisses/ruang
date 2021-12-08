@@ -1,8 +1,9 @@
-
+var app=getApp()
 Page({
   data: {
    
-    list:[]
+    list:[],
+    orders:[]
   },
 messagetap:function(e){
   wx.navigateTo({
@@ -12,9 +13,15 @@ messagetap:function(e){
 a: function () {
    
 },
-btn:function(){
+btn:function(e){
   wx.navigateTo({
     url: '../shangjia/shangjia',
+  })
+},
+xg:function(e){
+  
+  wx.navigateTo({
+    url: '../xiugai/xiugai?id='+ e.currentTarget.dataset.id
   })
 },
 
@@ -24,12 +31,17 @@ onLoad: function (options) {
 
  
   const db = wx.cloud.database({env: "shucheng-0gpblg8515636a51"});
-  const cont = db.collection('book');
- 
+  const cont = db.collection('book')
+  
+  .where({
+    Variety:0,
+    UserId:app.globalData.guserid
+  })
+  console.log(app.globalData.guserid)
   cont.get({
     //如果查询成功的话
     success: res => {
-      //这一步很重要，给ne赋值，没有这一步的话，前台就不会显示值
+      
       this.setData({
         list: res.data
       })

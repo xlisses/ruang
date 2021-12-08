@@ -14,6 +14,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    guserid:'fa4fe87261a591d700ff460638233e93',
+    gadminid:'fa4fe87261a591d700ff460638233e93'
   }
 })

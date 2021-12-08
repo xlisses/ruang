@@ -4,7 +4,7 @@
   </image>
 </view>
 <view class="sinfo" style="display: block; width: 100%;height: 60px; background-color: rgb(240, 240, 240); padding: 10px;">
-  <view class="sinfo_name" style="display: inline-block; position: relative; width: 200rpx; height: 53rpx; box-sizing: border-box; left: 20rpx; top: 8rpx;font-size: 20px;">{{list.BookName}}</view>
+  <view class="sinfo_name" style="display: inline-block; position: relative; width: 379rpx; height: 36rpx; box-sizing: border-box; left: 20rpx; top: 8rpx; font-size: 20px">{{list.BookName}}</view>
   <button bindtap='rpt' class="report" >举报</button>
   <view class="sinfo_price" >价格：￥{{list.Price}}</view>
 </view>
@@ -16,5 +16,5 @@
 </view>
 <view class="goumai_detailbottom">
   <button class="call" bintap='call'>联系商家</button>
-  <button class="offer"bindtap='offer'>立即购买</button>
+  <button class="offer" data-id="{{list._id}}" bindtap='offer'>立即购买</button>
 </view>

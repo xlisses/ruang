@@ -1,0 +1,15 @@
+.vm{
+  width: 343rpx;
+  height: 272rpx; 
+  display: block;
+   box-sizing: border-box;
+   
+
+
+}
+.mn{
+  width: 750rpx; 
+  height: 340rpx; 
+  display: block; 
+  box-sizing: border-box;
+}

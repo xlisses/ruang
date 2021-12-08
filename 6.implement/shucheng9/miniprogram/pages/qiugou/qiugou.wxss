@@ -32,7 +32,7 @@
   justify-items: center;
   align-items: center;
 }
-.qiugouimg img{
+.qiugouimg image{
   width: 100%;
   height: 90%;
   display: flex;

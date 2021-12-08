@@ -8,10 +8,10 @@
 
 
 
-<navigator class="qiugouitems" wx:for="{{qiugouObj}}" url="/pages/qiugou_detail/qiugou_detail" >
+<navigator class="qiugouitems" wx:key="id" wx:for="{{qiugouObj}}" url="../qiugou_detail/qiugou_detail?id={{item._id}}" >
       <view class="qiugouimg">
-            <img src="E:\微信开发\shucheng9\miniprogram\images\itembook.jpg"  
-             alt="详情"/>
+            <image src="{{item.BookImg}}"
+             ></image>
       </view>
       <view class="qiugouinfo">
             <view class="qiugouname">
@@ -21,7 +21,7 @@
             <view class="qiugoutip" style="font-variant: normal left; margin: 10px; font-size: 15px; text-overflow: ellipsis; overflow: hidden; font-size: 11px;">{{item.BookText}}</view>
             <view class="qiugubottom">
             <view class="qiugouprice" style="float: left; padding-left: 10px;">￥{{item.Price}}</view>
-            <button class="qiugouorfer" style="padding: 5px; width: 80px; height: 30px; font-size: 13px; background-color: rgb(132, 189, 236);border: 1px solid #1111;position: absolute; right: 10px;">供应</button>
+            <button class="qiugouorfer" style="padding: 5px; width: 80px; height: 30px; font-size: 13px; background-color: rgb(132, 189, 236);border: 1px solid #1111;position: absolute; right: 10px;" bindtap="togoumai">供应</button>
             </view>
       </view>
       

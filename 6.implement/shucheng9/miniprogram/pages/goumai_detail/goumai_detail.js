@@ -8,6 +8,7 @@ Page({
     wx.navigateTo({
       url: '../buy/buy?id='+ e.currentTarget.dataset.id
     })
+   
   
   },
   onLoad: function (options) {

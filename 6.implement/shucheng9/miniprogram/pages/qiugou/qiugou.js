@@ -4,8 +4,8 @@ wx.cloud.init()
 const app = getApp()
 const db = wx.cloud.database()
 const qiugou = db.collection('book')
-const num=4
-var page=4
+const num=5
+var page=5
 Page({
   data: {
     qiugouObj:""
@@ -25,6 +25,13 @@ Page({
       url: '/pages/qiugou/addqiugou'
     })
   },
+  togoumai:function (params) {
+    wx.navigateTo({
+      url: '/pages/buy/buy'
+    })
+  },
+
+
   myQiugou:function(params) {
     wx.navigateTo({
       url: '/pages/qiugou/myqiugou'
