@@ -1,22 +1,22 @@
-<view class="top_box">
-      <view class="top_1">
-            <view wx:if="{{!userinfo}}" class="top_1_1" bindtap="go" data-go="/pages/login/login">昵称</view>
+<view class="top_box" >
+      <view class="top_1" bindtap="Tomyinfo" style="width: 678rpx; height: 140rpx; display: flex; box-sizing: border-box">
+            <view wx:if="{{!userinfo}}" class="top_1_1" bindtap="go" data-go="/pages/login/login" >{{userObj[0].UserName}}</view>
             <view wx:if="{{userinfo}}" class="top_1_1">
                   <open-data type="userNickName"></open-data>
             </view>
-            <view class="top_1_2" wx:if="{{!userinfo}}">手机号</view>
+            <view class="top_1_2" wx:if="{{!userinfo}}">{{userObj[0].PhoneNum}}</view>
              <view class="top_1_2" wx:if="{{userinfo}}" bindtap="go" data-go="/pages/edit/edit" data-status="1">点击修改资料</view>
       </view>
-      <view class="top_2">
+      <view bindtap="Tomyinfo" class="top_2">
             <view class="avator">
                   <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
-                  <image wx:if="{{!userinfo}}" src="cloud://shucheng-0gpblg8515636a51.7368-shucheng-0gpblg8515636a51-1308544228/头像1.jpg"></image>
+                  <image wx:if="{{!userinfo}}" src="{{userObj[0].AvaTor}}"  style="width: 629rpx; height: 140rpx; display: inline-block; box-sizing: content-box"></image>
             </view>
       </view>
 </view>
 
 <view class="bottom_box">
-      <view class="bottom_card" bindtap="go" data-go="/pages/prase/prase" data-status="1">
+      <view class="bottom_card" bindtap="Toorder" data-go="/pages/order/order" data-status="1">
             <view class="bottom_1">
                   <image src="/images/order.png"></image>
                   <view>我的订单</view>
@@ -44,6 +44,7 @@
                   <view>意见反馈</view>
             </view>
             <image src="/images/go.png"></image>
+            <button open-type="feedback" style="width: 690rpx; height: 124rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"></button>
       </view>
       <view class="bottom_card" bindtap="Tous" data-go="/pages/about/about">
             <view class="bottom_1">
@@ -54,6 +55,6 @@
       </view>
 </view>
 <view style="margin: 100rpx;">
-<button type="primary" bindtap="Tologin">退出登录
+<button type="primary" bindtap="Tologin" style="position: fixed; left: 20%; top: 90%; width: 60%; height: 6%; display: block; box-sizing: border-box">退出登录
 </button>
 </view>

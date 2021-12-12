@@ -33,14 +33,14 @@ Page({
   //   })
   // },
   // 获取输入学号 
-  useridInput: function (e) {
+  useridinput: function (e) {
     this.setData({
       userid: e.detail.value
     })
   },
 
   // 获取输入密码 
-  passwordInput: function (e) {
+  passwordinput: function (e) {
     this.setData({
       password: e.detail.value
     })
@@ -65,9 +65,15 @@ Page({
         StuNum: that.data.userid
       }).get({
         success: function (res) {
+          if (res.data.length == 0) {
+            wx.showModal({
+              title: '该用户不存在',
+              content: '该用户不存在'
+            });
+          }
           if (res.data[0].State == 1) {
             if (res.data[0].Pwd == that.data.password) {
-              app.globalData.guserid=res.data[0]._id
+              app.globalData.guserid = res.data[0]._id
               wx.switchTab({
                 url: '../goumai/goumai',
               })
@@ -77,7 +83,7 @@ Page({
                 content: '密码错误'
               });
             }
-          }else{
+          } else {
             wx.showModal({
               title: '该用户已冻结',
               content: '该用户已冻结'
@@ -106,10 +112,16 @@ Page({
         StuNum: that.data.userid
       }).get({
         success: function (res) {
-          if(res.data[0].Propeety == 1){
+          if (res.data.length == 0) {
+            wx.showModal({
+              title: '该用户不存在',
+              content: '该用户不存在'
+            });
+          }
+          if (res.data[0].Propeety == 1) {
             if (res.data[0].State == 1) {
               if (res.data[0].Pwd == that.data.password) {
-                app.globalData.gadminid=res.data[0]._id
+                app.globalData.gadminid = res.data[0]._id
                 wx.navigateTo({
                   url: '../admin/admin',
                 })
@@ -119,13 +131,13 @@ Page({
                   content: '密码错误'
                 });
               }
-            }else{
+            } else {
               wx.showModal({
                 title: '该用户已冻结',
                 content: '该用户已冻结'
               });
             }
-          }else{
+          } else {
             wx.showModal({
               title: '该用户不是管理员',
               content: '该用户不是管理员'

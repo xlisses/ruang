@@ -23,7 +23,7 @@
       <view for="" class="price" type='number' style="position: relative; left: 302rpx; top: -176rpx">￥{{item.Price}}</view>
       
       <view for="" class="usrname"  style="position: relative; left: 538rpx; top: -268rpx">{{item.UserName}}</view>
-      <button  bindtap='xg' data-id="{{item._id}}"   style="position: relative; left: 226rpx; top: -213rpx; width: 153rpx; height: 71rpx; display: block; box-sizing: border-box">修改</button>
+      <button  bindtap='xg' data-id="{{item._id}}"  style="position: relative; left: 226rpx; top: -213rpx; width: 153rpx; height: 71rpx; display: block; box-sizing: border-box">修改</button>
       <view  for=""  class="stk"  style="position: relative; left: 538rpx; top: -199rpx; width: 743rpx; height: 37rpx; display: block; box-sizing: border-box">库存{{item.Stock}}</view>
       <view  for=""  class="col"  style="position: relative; left: 272rpx; top: -236rpx">{{item.College}}</view>
       
@@ -48,7 +48,7 @@
 
 <!--首次进入提示收藏小程序-->
 <tips />
-<button bindtap='btn' style="position: fixed; left: 118rpx; top: 1253rpx; width: 475rpx; height: 60rpx; display: block; box-sizing: border-box">上架商品</button>
+<button bindtap='btn' type="primary" style="position: fixed; left: 20%; top: 90%; width: 60%; height: 6%; display: block; box-sizing: border-box">上架商品</button>
 
 
 

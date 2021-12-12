@@ -1,14 +1,14 @@
 // pages/shangjia/shangjia.js
 var app=getApp()
+var imglist=[]
 Page({
-
-  /**
-   * 页面的初始数据
-   */
- 
   data: {
-    
-    
+    selectShow1: false,//控制下拉列表的显示隐藏，false隐藏、true显示
+    selectShow2: false,//控制下拉列表的显示隐藏，false隐藏、true显示
+    selectData1: ['请选择学院','计算','法学' ,'医学'],//下拉列表的数据
+    selectData2: ['请选择专业','软工','大数据','计算机'],
+    index1: 0,//选择的下拉列表下标
+    index2:0,
     
     bookid: '',
     bookname: '',
@@ -16,12 +16,45 @@ Page({
     booktext: '',
     college: '',
     username: '',
-    bookimg:'',
+    imglist:'',
     speciality:'',
     userid:'',
     num:0,
     phonenum:'',
   },
+
+// 点击下拉显示框
+selectTap1() {
+  this.setData({
+    selectShow1: !this.data.selectShow1
+  });
+  
+},
+// 点击下拉列表
+optionTap1(e) {
+  let Index0 = e.currentTarget.dataset.index;//获取点击的下拉列表的下标
+  this.setData({
+    index1: Index0,
+    selectShow1: !this.data.selectShow1
+  });
+  console.log(e)
+},
+// 点击下拉显示框
+selectTap2() {
+  this.setData({
+    selectShow2: !this.data.selectShow2
+  })
+
+},
+// 点击下拉列表
+optionTap2(e) {
+  let Index = e.currentTarget.dataset.index;//获取点击的下拉列表的下标
+  this.setData({
+    index2: Index,
+    selectShow2: !this.data.selectShow2
+  });
+
+},
   nameInput: function (e) {
    
     this.setData({
@@ -35,32 +68,16 @@ Page({
       price: e.detail.value
     })
   },
-  
-
-
-
   textInput: function (e) {
     this.setData({
       booktext: e.detail.value
     })
   },
-  collegeInput: function (e) {
-    this.setData({
-      college: e.detail.value
-    })
-  },
-  SpecialityInput: function (e) {
-    
-    this.setData({
-      speciality: e.detail.value
-    })
-  },
-NumInput:function(e){
+ numInput:function(e){
   this.setData({
     num: e.detail.value
   })
 },
-
   bokimg:function(e) {
     
     wx.chooseImage({
@@ -115,29 +132,72 @@ NumInput:function(e){
         });
       }
     })
+   
   },
-
-  
-
 
   sureTap:function(){
    var that=this
+  
+
+   if(that.data.bookname==''){
+    wx.showToast({
+      icon:'none',
+      title: '名称不能为空',
+    })
+  }
+  else if(that.data.price==0){
+    wx.showToast({
+      icon:'none',
+      title: '价格不能为空',
+    })
+  }
+  else if(that.data.booktext==''){
+    wx.showToast({
+      icon:'none',
+      title: '介绍不能为空',
+    })
+  }
+  else if(that.data.selectData1[that.data.index]=="请选择学院"){
+    wx.showToast({
+      icon:'none',
+      title: '请选择学院',
+    })
+  }
+  else if(that.data.selectData2[that.data.index]=="请选择专业"){
+    wx.showToast({
+      icon:'none',
+      title: '请选择专业',
+    })
+  }
+  else if(that.data.num==0){
+    wx.showToast({
+      icon:'none',
+      title: '数量不能为空',
+    })
+  }
+  else if(imglist==''){
+    wx.showToast({
+      icon:'none',
+      title: '图片不能为空',
+    })
+  }
+   else{
    wx.cloud.database().collection('book').add({
     
     data:{
     BookId: that.data._id,
     BookName: that.data.bookname,
-    Price: that.data.price,
+    Price: parseFloat(that.data.price),
     BookText: that.data.booktext,
-    College: that.data.college,
-    Speciality:that.data.speciality,
+    College: that.data.selectData1[that.data.index1],
+    Speciality:that.data.selectData2[that.data.index2],
     UserName:that.data.username,
     Variety:0,
-    BookImg: that.data.bookimg,
+    BookImg: imglist,
     UserId:that.data.userid ,  
-    Stock:that.data.num,
+    Stock:parseInt(that.data.num),
     PhoneNum:that.data.phonenum,
-    State:0,
+    State:1,
   }
      
 
@@ -158,13 +218,11 @@ NumInput:function(e){
               url: '../goumai/goumai',
             })
          } 
-
-
-
          }
       
      
    })
+  }
   },
 
   /**
@@ -233,9 +291,6 @@ success:res=>{
   onShareAppMessage: function () {
 
   }
-
-
-
 
 })
 

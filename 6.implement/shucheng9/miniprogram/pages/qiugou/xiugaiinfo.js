@@ -1,15 +1,41 @@
+const app = getApp()
+const db = wx.cloud.database()
+const qiugou = db.collection('book')
+var id
+var xiugaiprice=""
+var xiugainame=""
+var xiugaitext=""
+var xiugainum=""
 Page({
  
   /**
    * 页面的初始数据
    */
   data: {
-    imgs: [],
-    placeholder: '请选择',
-   
-    
+      imgs: [],
+      placeholder: '请选择',
+      Name:"",
+      Price:"",
+      Text:"",
+      Num:0
   },
   // 上传图片
+  nameInput(e){
+    console.log(e.detail)
+      xiugainame=e.detail.value
+  },
+  priceInput(e){
+    console.log(e.detail)
+      xiugaiprice=e.detail.value
+  },
+  textInput(e){
+    console.log(e.detail.value)
+      xiugaitext=e.detail.value
+  },
+  numInput(e){
+    console.log(e.detail.value)
+      xiugainum=e.detail.value
+  },
   chooseImg: function (e) {
     var that = this;
     var imgs = this.data.imgs;
@@ -73,7 +99,28 @@ Page({
     })
   },
  
- 
+  xiugaiinfo:function(){
+    qiugou.doc(id).update({
+      data:({
+        BookName:xiugainame,
+        BookPrice:parseFloat(xiugaiprice),
+        BookText:xiugaitext,
+        Stock:ParseInt(xiugainum)
+      }),
+      success:function (params) {
+        wx.showToast({
+          title: '修改成功！',
+          duration:1500
+        })
+        
+        setTimeout(function(params) {
+          wx.navigateBack({
+            delta: 0,
+          })
+        },1500)
+       }
+    })
+  },
  
   bindPickerChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -93,53 +140,47 @@ Page({
       region: e.detail.value
     })
   },
- 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
- 
+
+  delqiugoulist:function(options){
+   var delid=id;
+  
+    qiugou.where(
+     {
+     _id:delid}).remove({
+       success:function (params) {
+        wx.showToast({
+          title: '删除成功！',
+          duration:1500
+        })
+        
+        setTimeout(function(params) {
+          wx.navigateBack({
+            delta: 0,
+          })
+        },1500)
+       }
+     })
   },
- 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
- 
-  },
- 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
- 
-  },
- 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
- 
-  },
- 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
- 
-  },
- 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
- 
-  },
- 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
- 
-  }
+ onLoad: function(options){
+   id=options.id
+  console.log(id)
+  qiugou.doc(id).get({
+    success: res=>{
+      // res.data 包含该记录的数据
+      console.log(res.data)
+      xiugainame=res.data.BookName
+      xiugaiprice=res.data.BookPrice
+      xiugaitext=res.data.BookText
+      xiugainum=res.data.Stock
+      this.setData({
+        Name:res.data.BookName,
+        Price:res.data.Price,
+        Text:res.data.BookText,
+        Num:res.data.Stock
+      })
+    }
+    
+  })
+ },
+
 })

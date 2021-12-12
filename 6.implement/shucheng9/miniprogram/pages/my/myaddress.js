@@ -4,48 +4,58 @@ wx.cloud.init({
   traceUser: true
 })
 const db = wx.cloud.database()
- 
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isDisabled:true, //表示页面加载完成时disabled为启用状态
-    text:"编辑",
-    address:""
+    address: "",
+    list:[],
+    hiddenmodalput:true
   },
-  changeInfo(e) { //点击事件发生时
-    //一定要写成this.data.isDisabled，不然判断出不来
-    if (!this.data.isDisabled) { //当disabled=false时
-    this.setData({ 
-    isDisabled: true, //修改isDisabled的值为true（即启用状态）
-    text: "编辑" //文字修改为“编辑”
+  addressinput: function (e) {
+    this.setData({
+      address: e.detail.value
     })
-    }
-    else { //当disabled=true时
-    this.setData({ 
-    isDisabled: false, //修改isDisabled的值为false（即禁用状态）
-    text: "保存" //文字修改为“保存”
+  },
+  changeInfo:function(e) { 
+    this.setData({
+      hiddenmodalput:!this.data.hiddenmodalput
     })
-    }
+  },
+  cancel:function(){
+    this.setData({
+      hiddenmodalput: true
+    })
+  },
+  confirm:function(res){
+    this.setData({
+      hiddenmodalput:true
+    })
+    db.collection('user').where({
+      _id: app.globalData.guserid
+    }).update({
+      data:{
+        UserAddress:this.data.address
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     db.collection('user').where({
-      StuNum:"31901240"
+      _id: app.globalData.guserid
     }).get({
-      success: res=>{
+      success: res => {
         // res.data 包含该记录的数据
-        console.log(res.data[0].UserAddress)
         this.setData({
-          address:res.data[0].UserAddress
-        })
-      
-    }
-
+          address: res.data[0].UserAddress,
+          list: res.data,
+        })      
+      }
     })
   },
 

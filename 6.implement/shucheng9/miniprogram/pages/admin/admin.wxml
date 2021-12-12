@@ -8,8 +8,8 @@
       </view>
       <view class="top_2">
             <view class="avator">
-                  <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
-                  <image src="/images/avator.png"></image>
+                  <!-- <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
+                  <image src="/images/avator.png"></image> -->
             </view>
       </view>
 </view>

@@ -16,31 +16,31 @@ Page({
     success: false,
   },
   // 获取输入学号 
-  useridInput: function (e) {
+  useridinput: function (e) {
     this.setData({
       userid: e.detail.value
     })
   },
   // 获取输入密码
-  passwordInput: function (e) {
+  passwordinput: function (e) {
     this.setData({
       password: e.detail.value
     })
   },
   // 获取输入昵称
-  nicknameInput: function (e) {
+  nicknameinput: function (e) {
     this.setData({
       nickname: e.detail.value
     })
   },
   // 获取输入电话
-  phoneInput: function (e) {
+  phoneinput: function (e) {
     this.setData({
       phone: e.detail.value
     })
   },
   // 获取输入地址
-  addressInput: function (e) {
+  addressinput: function (e) {
     this.setData({
       address: e.detail.value
     })
@@ -74,7 +74,6 @@ Page({
                 PhoneNum: that.data.phone,
                 UserAddress: that.data.address,
                 Propeety: 0,
-                URptimes: 0,
                 State: 1
               }
             })

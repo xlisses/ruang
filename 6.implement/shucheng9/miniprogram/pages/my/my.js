@@ -1,14 +1,16 @@
 // index.js
 // 获取应用实例
 const app = getApp()
-
+const db = wx.cloud.database()
+const user = db.collection('user')
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    userObj: ""
   },
   // 事件处理函数
   bindViewTap() {
@@ -16,27 +18,56 @@ Page({
       url: '../logs/logs'
     })
   },
-  Tohelpcenter(){
+  Tohelpcenter() {
     wx.navigateTo({
       url: 'helpcenter'
     })
   },
-Tous(){
-  wx.navigateTo({
-    url: 'us'
-  })
-},
-Tologin(){
-  wx.navigateTo({
-    url: '../login/login'
-  })
-},
-  Toaddress(){
+  Toorder() {
+    wx.navigateTo({
+      url: '/pages/order/order'
+    })
+  },
+  Tous() {
+    wx.navigateTo({
+      url: 'us'
+    })
+  },
+  Tomyinfo(){
+    wx.navigateTo({
+      url: 'myinfo'
+    })
+  },
+  Tologin() {
+    wx.redirectTo({
+      url: '../login/login'
+    })
+    this.setData({
+      userObj: ""
+    })
+  },
+  Toaddress() {
     wx.navigateTo({
       url: 'myaddress'
     })
   },
+  onShow() {
+    user.where({
+      _id: app.globalData.guserid
+    }).get({
+      success: res => {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+
+        this.setData({
+          userObj: res.data
+        })
+      }
+    })
+  },
   onLoad() {
+
+
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true

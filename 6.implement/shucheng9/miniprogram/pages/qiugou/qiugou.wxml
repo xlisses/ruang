@@ -8,30 +8,29 @@
 
 
 
-<navigator class="qiugouitems" wx:key="id" wx:for="{{qiugouObj}}" url="../qiugou_detail/qiugou_detail?id={{item._id}}" >
+<navigator class="qiugouitems" wx:key="id" wx:for="{{qiugouObj}}" url="../qiugou_detail/qiugou_detail?id={{item._id}}">
       <view class="qiugouimg">
-            <image src="{{item.BookImg}}"
-             ></image>
+            <image src="{{item.BookImg}}"></image>
       </view>
       <view class="qiugouinfo">
             <view class="qiugouname">
-            <view class="qiugoubookname" style="float: left;margin: 10px;">{{item.BookName}}</view>
-            <view class="qiugouusername" style="margin: 10px; font-size: 15px;">{{item.UserName}}</view>
+                  <view class="qiugoubookname" style="float: left;margin: 10px;">{{item.BookName}}</view>
+                  <view class="qiugouusername" style="margin: 10px; font-size: 15px;">{{item.UserName}}</view>
             </view>
             <view class="qiugoutip" style="font-variant: normal left; margin: 10px; font-size: 15px; text-overflow: ellipsis; overflow: hidden; font-size: 11px;">{{item.BookText}}</view>
             <view class="qiugubottom">
-            <view class="qiugouprice" style="float: left; padding-left: 10px;">￥{{item.Price}}</view>
-            <button class="qiugouorfer" style="padding: 5px; width: 80px; height: 30px; font-size: 13px; background-color: rgb(132, 189, 236);border: 1px solid #1111;position: absolute; right: 10px;" bindtap="togoumai">供应</button>
+                  <view class="qiugouprice" style="float: left; padding-left: 10px;">￥{{item.Price}}</view>
+                  <view class="qiugounum" style="float: left; padding-left: 30px;">需要:{{item.Stock}}本</view>
+                  <button  style="padding: 5px; width: 80px; height: 30px; font-size: 13px; background-color: rgb(132, 189, 236);border: 1px solid #1111;position: absolute; right: 10px;" data-id="{{item._id}}" bindtap="togoumai">供应</button>
             </view>
       </view>
-      
+
 </navigator>
 <view class="qiugoubottom">
-      <button class="addqiugou" bindtap="addQiugou">
-      新建求购
+      <button class="addqiugou" type="primary" bindtap="addQiugou">
+            新建求购
       </button>
-      <button class="myqiugou" bindtap=myQiugou">
-      我的求购
+      <button class="myqiugou" type="primary" bindtap=myQiugou">
+            我的求购
       </button>
 </view>
- 
