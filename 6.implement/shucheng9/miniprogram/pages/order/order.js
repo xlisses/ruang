@@ -57,7 +57,7 @@ shouhuo: function(e){
 dtl:function(e){
 
 wx.navigateTo({
-  url: '../goumai_detail/goumai_detail?id='+ e.currentTarget.dataset.id
+  url: '../order_detail/order_detail?id='+ e.currentTarget.dataset.id
 })
 
 },
@@ -66,7 +66,7 @@ wx.navigateTo({
 onLoad: function (options) {
   var that = this;
   const db = wx.cloud.database({env: "shucheng-0gpblg8515636a51"});
-  const cont = db.collection('book');
+  const cont = db.collection('order');
  
 
   cont.get({

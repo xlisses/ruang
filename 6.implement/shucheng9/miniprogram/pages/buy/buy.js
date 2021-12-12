@@ -55,7 +55,8 @@ num:0,
       
       
   },
-  txtInput: function (e) {
+  txtinput: function (e) {
+    console.log(e)
     this.setData({
       booktext: e.detail.value
     })
@@ -72,7 +73,20 @@ numinput:function(e){
 
     var that = this;
     
-    var date=util
+    if(that.data.booktext==''){
+      wx.showToast({
+        icon:'none',
+        title: '备注空',
+      })
+    }
+    else if(that.data.num==0){
+      wx.showToast({
+        icon:'none',
+        title: '数量请选择',
+      })
+    }
+
+    else{
     wx.cloud.database().collection('order').add({
       
       data:{
@@ -117,7 +131,9 @@ numinput:function(e){
     that.setData({
                  booktext: '',
                 })
+                }
   },
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

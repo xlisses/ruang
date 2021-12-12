@@ -5,6 +5,12 @@ Page({
     list:[],
     orders:[]
   },
+  dtl:function(e){
+    wx.navigateTo({
+      url: '../shoumai_dtl/shoumai_dtl?id='+ e.currentTarget.dataset.id
+    })
+    
+  },
 messagetap:function(e){
   wx.navigateTo({
     url: '../index/index',
@@ -37,7 +43,7 @@ onLoad: function (options) {
     Variety:0,
     UserId:app.globalData.guserid
   })
-  console.log(app.globalData.guserid)
+
   cont.get({
     //如果查询成功的话
     success: res => {

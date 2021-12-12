@@ -103,8 +103,8 @@ Page({
  
   sureTap:function(){
    var that=this
-  
-   wx.cloud.database().collection('book').add({
+  console.log(that.data)
+   wx.cloud.database().collection('book').doc(that.data.list._id).update({
       data:{
     BookId: that.data._id,
     BookName: that.data.bookname,
@@ -119,7 +119,26 @@ Page({
     
 
     })
+    wx.showModal({
+      title: '修改成功',
+     
+      showCancel: false,//是否显示取消按钮
+     
+      cancelColor:'skyblue',//取消文字的颜色
+      confirmText:"确定",//默认是“确定”
+      confirmColor: 'skyblue',//确定文字的颜色
+      success: function (res) {
+         if (res.confirm) {
+            wx.switchTab
+             ({
+              url: '../goumai/goumai',
+            })
+         } 
 
+         }
+      
+     
+   })
 
 
 

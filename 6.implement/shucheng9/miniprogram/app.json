@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/order/order",
     "pages/login/login",
     "pages/dealur/dealur",
     "pages/dealur_detail/dealur_detail",
@@ -18,7 +19,7 @@
     "pages/qiugou_detail/qiugou_detail",
     "pages/test/test",
     "pages/xiugai/xiugai",
-    "pages/order/order"
+    "pages/order_detail/order_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,38 +30,35 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
-
-
   "tabBar": {
-  "color": "#a9b7b7",
-  "selectedColor": "#11cd6e",
-  "borderStyle": "white",
-  "list": [
-    {
-      "selectedIconPath": "images/goumai.png",
-      "iconPath": "images/goumai.png",
-      "pagePath": "pages/goumai/goumai",
-      "text": "购买"
-    },
-    {
-      "selectedIconPath": "images/shoumai.png",
-      "iconPath": "images/shoumai.png",
-      "pagePath": "pages/shoumai/shoumai",
-      "text": "售卖"
-    },
-    {
-      "selectedIconPath": "images/qiugou.png",
-      "iconPath": "images/qiugou.png",
-      "pagePath": "pages/qiugou/qiugou",
-      "text": "求购"
-    },
-    {
-      "selectedIconPath": "images/gerenzhongxin.png",
-      "iconPath": "images/gerenzhongxin.png",
-      "pagePath": "pages/my/my",
-      "text": "个人中心"
-    }
-  ]
-}
-
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/goumai.png",
+        "iconPath": "images/goumai.png",
+        "pagePath": "pages/goumai/goumai",
+        "text": "购买"
+      },
+      {
+        "selectedIconPath": "images/shoumai.png",
+        "iconPath": "images/shoumai.png",
+        "pagePath": "pages/shoumai/shoumai",
+        "text": "售卖"
+      },
+      {
+        "selectedIconPath": "images/qiugou.png",
+        "iconPath": "images/qiugou.png",
+        "pagePath": "pages/qiugou/qiugou",
+        "text": "求购"
+      },
+      {
+        "selectedIconPath": "images/gerenzhongxin.png",
+        "iconPath": "images/gerenzhongxin.png",
+        "pagePath": "pages/my/my",
+        "text": "个人中心"
+      }
+    ]
+  }
 }
