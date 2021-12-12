@@ -20,7 +20,11 @@
 </view>
 
 <view class='line'></view>
-
+<view class='main row'>
+  <image class='left icon' src='/images/goumai.png'></image>
+  <input class='input' bindinput='numInput' placeholder='数量'></input>
+</view>
+<view class='line'></view>
 <view class='main row'>
   <image class='left icon' src='/images/imagesst.png'></image>
   <input class='input' bindinput='textInput' placeholder='求购条件'></input>
@@ -30,11 +34,11 @@
 <view class='main row'>
   <image class='left icon' src='/images/pic.png'></image>
   
-  <button  bindtap='bokimg'  style="width: 317rpx; height: 92rpx; display: block; box-sizing: border-box; left: -177rpx; top: 26rpx; position: relative"><text class="txt">上传图片</text></button>
+  <button  bindtap='bokimg'  style="width: 40%; height: 80rpx; display: block; box-sizing: border-box; left: -177rpx; top: 15%; position: relative;background-color: rgb(216, 232, 233);"><text class="txt">上传图片</text></button>
 
 </view>
 <view class="footer" style="width: 100%;position: fixed;bottom: 30%;">
-<button class="addqiugou" bindtap="addqiugoulist" style="display: flex; justify-content: center; align-items: center;">
+<button  type="primary" bindtap="addqiugoulist" style="position: fixed; left: 20%; top: 80%; width: 60%; height: 5%; display: block; box-sizing: border-box">
       新建
       </button>
     </view>

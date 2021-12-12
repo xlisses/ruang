@@ -1,0 +1,116 @@
+// pages/report/report.js
+wx.cloud.init({
+  env: 'shucheng-0gpblg8515636a51', //数据库ID
+  traceUser: true
+})
+var id=""
+const db = wx.cloud.database()
+const report = db.collection('book')
+var text=""
+ var bookname=""
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    bookname:"",
+    username:"",
+    bookprice:""
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+     id=options.id
+    report.doc(id).get({
+      success: res=>{
+        // res.data 包含该记录的数据
+        console.log(res.data)
+        bookname=res.data.BookName
+        this.setData({
+          bookname:res.data.BookName,
+          username:res.data.UserName,
+          bookprice:res.data.Price
+        })
+      }
+      
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+  textinput(e){
+    console.log(e.detail.value)
+    text=e.detail.value
+  },
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+  addreport:function(){
+    db.collection('bookreport').add({
+      data:{
+        BookId:id,
+        BookName:bookname,
+        BRptext:text,
+        state:"1"
+
+
+      },
+      success:function(params) {
+        wx.showToast({
+          title: '举报成功！',
+          duration:1500
+        })
+        
+        setTimeout(function(params) {
+          wx.navigateBack({
+            delta: 0,
+          })
+        },1500)
+      },
+    })
+  },
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})

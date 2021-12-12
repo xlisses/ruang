@@ -8,17 +8,21 @@
   justify-content: center;
 }
 .qiugou_detailbottom .call{
-  width: 45%;
-  background-color: lightsalmon;
-  left: 30px;
-  font-size: 15px;
-  padding: 10px;
+  position: fixed;
+  left: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
   
 }
 .qiugou_detailbottom .offer{
-  width: 45%;
-  background-color: lightsalmon;
-  left: 40px;
-  font-size: 15px;
-  padding: 10px;
+  position: fixed;
+  right: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
 }

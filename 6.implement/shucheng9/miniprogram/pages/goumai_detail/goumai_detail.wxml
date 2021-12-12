@@ -1,4 +1,4 @@
-<!--pages/qiugou_detail/qiugou_detail.wxml-->
+
 <view class="topimg" style="display: flex; width: 100%;height: 210px;background-color: aqua;justify-content: center; align-items: center;">
   <image  src='{{list.BookImg}}'style="width: 80%; height: 95%; background-color: black;">
   </image>
@@ -15,6 +15,6 @@
 
 </view>
 <view class="goumai_detailbottom">
-  <button class="call" bintap='call'>联系商家</button>
-  <button class="offer" data-id="{{list._id}}" bindtap='offer'>立即购买</button>
+  <button class="call" type="primary" bintap='call'>联系商家</button>
+  <button class="offer" type="primary" data-id="{{list._id}}" bindtap='offer'>立即购买</button>
 </view>

@@ -1,4 +1,3 @@
-
 .list_box {
   width: 100%;
   display: flex;
@@ -15,59 +14,69 @@
   color: #c6c6c8;
 }
 
-.qiugouitems{
-  width:100%;
+.qiugouitems {
+  width: 100%;
   height: 8rem;
   background: #ffffff;
-  text-align:center;
+  text-align: center;
   display: grid;
   grid-template-columns: 33% 64%;
-  grid-template-rows: 100% ;
-  
+  grid-template-rows: 100%;
+
   padding-left: 5px;
   border-bottom: 1px solid #c9c1c1;
 }
-.qiugouimg{
+
+.qiugouimg {
   display: flex;
   justify-items: center;
   align-items: center;
 }
-.qiugouimg image{
+
+.qiugouimg image {
   width: 100%;
   height: 90%;
   display: flex;
   background-color: #ebe2e2;
-  
-}
-.qiugouinfo{
-  display: grid;
-  grid-template-columns: 95%;
-  grid-template-rows: 20% 50% 20% ;
 
 }
-.qiugouimg img{
+
+.qiugouinfo {
+  display: grid;
+  grid-template-columns: 95%;
+  grid-template-rows: 20% 50% 20%;
+
+}
+
+.qiugouimg img {
   src: url(https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg);
 }
-.qiugoubottom{
+
+.qiugoubottom {
   position: fixed;
   display: flex;
   float: left;
   width: 80%;
-  bottom:10px;
+  bottom: 10px;
   justify-content: center;
 }
-.qiugoubottom .addqiugou{
-  width: 35%;
-  background-color: lightsalmon;
-  left: 30px;
-  font-size: 15px;
-  padding: 10px;
-  
+
+.qiugoubottom .addqiugou {
+  position: fixed;
+  left: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
 }
-.qiugoubottom .myqiugou{
-  width: 35%;
-  background-color: lightsalmon;
-  left: 40px;
-  font-size: 15px;
-  padding: 10px;
+
+.qiugoubottom .myqiugou {
+  position: fixed;
+  right: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
 }

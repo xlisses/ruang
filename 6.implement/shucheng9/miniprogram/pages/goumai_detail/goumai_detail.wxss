@@ -11,19 +11,23 @@
   padding-bottom: 30px;
 }
 .goumai_detailbottom .call{
-  width: 45%;
-  background-color: lightsalmon;
-  left: 30px;
-  font-size: 15px;
-  padding: 10px;
+  position: fixed;
+  left: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
   
 }
 .goumai_detailbottom .offer{
-  width: 45%;
-  background-color: lightsalmon;
-  left: 40px;
-  font-size: 15px;
-  padding: 10px;
+  position: fixed;
+  right: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
 }
 .info_title{
   font-weight:bold;
@@ -41,13 +45,12 @@
   
   
    width: 151rpx; 
-   font-size: 12px; 
    height: 81rpx; 
    left: 547rpx; 
    top: 409rpx; 
    display: block; 
    box-sizing: border-box;
-   font-size: 18px;
+   font-size: 15px;
    background-color: rgb(141, 139, 139);
 }
 .sinfo_price{

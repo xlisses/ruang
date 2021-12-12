@@ -45,19 +45,17 @@ page {
 }
 
 .registerlab {
-    margin: 18px 18px 18px 10px;
+    margin:5% 5% 5% 5%;
     color: #545454;
-    font-size: 18px
+    flex: block;
 }
 
 .inputtext {
     flex: block;
     float: right;
     text-align: left;
-    margin-right: 22px;
-    margin-top: 18px;
+    margin-top: 5%;
     color: #cccccc;
-    font-size: 18px
 }
 
 .line {

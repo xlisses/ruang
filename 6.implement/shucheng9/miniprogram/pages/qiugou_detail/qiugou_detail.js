@@ -3,6 +3,7 @@ wx.cloud.init()
 const app = getApp()
 const db = wx.cloud.database()
 const qiugou = db.collection('book')
+var yid
 Page({
 
   /**
@@ -13,7 +14,12 @@ Page({
   },
   togoumai:function (params) {
     wx.navigateTo({
-      url: '/pages/buy/buy'
+      url: '/pages/buy/buy?id='+yid
+    })
+  },
+  toreport:function(params){
+    wx.navigateTo({
+      url: '/pages/report/report?id='+yid
     })
   },
   /**
@@ -21,6 +27,7 @@ Page({
    */
   onLoad: function (options) {
     var id=options.id
+    yid=options.id
     qiugou.doc(id).get({
       success: res=>{
         // res.data 包含该记录的数据

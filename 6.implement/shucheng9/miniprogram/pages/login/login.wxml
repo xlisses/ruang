@@ -11,14 +11,14 @@
     <view class="inputView">
       <image class="nameImage" src="/images/userid.png"></image>
       <label class="loginLab">学号</label>
-      <input class="inputText" placeholder="请输入学号" bindinput="useridInput" />
+      <input class="inputText" placeholder="请输入学号" bindinput="useridinput" />
     </view>
     <view class="line"></view>
     <!--密码-->
     <view class="inputView">
       <image class="keyImage" src="/images/password.png"></image>
       <label class="loginLab">密码</label>
-      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" />
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordinput" />
     </view>
     <!--登陆-->
     <view class="loginBtnView"
@@ -28,17 +28,17 @@
         style="position: relative; left: -162rpx; top: -25rpx; width: 276rpx; height: 93rpx; display: block; box-sizing: border-box">登录</button>
       <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
         disabled="{{disabled}}" bindtap="adminlogin"
-        style="position: relative; left: 158rpx; top: -179rpx; width: 276rpx; height: 93rpx; display: block; box-sizing: border-box">管理员登录</button>
+        style="position: relative; left: 158rpx; top: -242rpx; width: 276rpx; height: 93rpx; display: block; box-sizing: border-box">管理员登录</button>
     </view>
 
     <!--注册与忘记密码-->
-    <view class="registerBtnView">
+    <view>
       <button class="registerBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
         disabled="{{disabled}}" bindtap="register"
-        style="width: 284rpx; height: 94rpx; display: block; box-sizing: border-box; left: -158rpx; top: 24rpx; position: relative">注册</button>
-      <button class="registerBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        style="position: fixed; left: 20%; top: 80%; width: 60%; height: 6%; display: block; box-sizing: border-box">注册</button>
+      <!-- <button class="registerBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
         disabled="{{disabled}}" bindtap="register"
-        style="width: 284rpx; height: 94rpx; display: block; box-sizing: border-box; left: 160rpx; top: -79rpx; position: relative">忘记密码</button>
+        style="width: 284rpx; height: 94rpx; display: block; box-sizing: border-box; left: 160rpx; top: -79rpx; position: relative">忘记密码</button> -->
     </view>
   </view>
 </view>

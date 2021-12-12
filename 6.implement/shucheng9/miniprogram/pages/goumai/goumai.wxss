@@ -30,10 +30,9 @@
 }
 
 .blank_text {
-  padding-top: 40rpx;
   font-size: 32rpx;
   letter-spacing: 2rpx;
-  color: #c6c6c8;
+  color:black;
 }
 
 
@@ -52,7 +51,7 @@ weui-search-bar {
 }
 .weui-icon-search_in-box {
   position: absolute;
-  left: 10px;
+  left: 0px;
   top: 7px;
 }
 .weui-search-bar__form {

@@ -4,13 +4,13 @@ wx.cloud.init()
 const app = getApp()
 const db = wx.cloud.database()
 const qiugou = db.collection('book')
-const num=5
-var page=5
+const num = 8
+var page = 8
 Page({
   data: {
-    qiugouObj:""
+    qiugouObj: ""
   },
-  
+
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({
@@ -18,50 +18,57 @@ Page({
     })
   },
   onShow() {
-    
+
   },
-  addQiugou:function(params) {
+  addQiugou: function (params) {
     wx.navigateTo({
       url: '/pages/qiugou/addqiugou'
     })
   },
-  togoumai:function (params) {
+  togoumai: function (e) {
     wx.navigateTo({
-      url: '/pages/buy/buy'
+      url: '/pages/buy/buy?id=' + e.currentTarget.dataset.id
     })
   },
 
 
-  myQiugou:function(params) {
+  myQiugou: function (params) {
     wx.navigateTo({
       url: '/pages/qiugou/myqiugou'
     })
   },
   onLoad() {
-    qiugou.limit(num).get({
-      success: res=>{
+    qiugou.limit(8).where({
+      Variety: 1, //求购供应类型
+      UserId: db.command.neq(app.globalData.guserid), //不是自己求购的
+      Stock: db.command.gt(0), //需求大于0
+      State: 1 //未被下架
+    }).get({
+      success: res => {
         // res.data 包含该记录的数据
         console.log(res.data)
+
         this.setData({
-          qiugouObj:res.data
+          qiugouObj: res.data
         })
       }
-      
     })
   },
-  onReachBottom:function(){
-    page=page+1
-    
-    qiugou.limit(page).get({
-      success: res=>{
+  onReachBottom: function () {
+    page = page + 3
+
+    qiugou.limit(page).where({
+      Variety: 1
+    }).get({
+      success: res => {
         // res.data 包含该记录的数据
         console.log(res.data)
         console.log(page)
         this.setData({
-          qiugouObj:res.data
+          qiugouObj: res.data
         })
       }
-      
+
     })
   },
   getUserProfile(e) {
@@ -77,5 +84,5 @@ Page({
       }
     })
   },
- 
+
 })

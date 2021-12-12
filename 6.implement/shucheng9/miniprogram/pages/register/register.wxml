@@ -12,35 +12,35 @@
         <view class="inputview">
             <image class="nameimage" src="/images/userid.png"></image>
             <label class="registerlab">学号</label>
-            <input class="inputtext" placeholder="请输入学号" bindinput="useridInput" />
+            <input class="inputtext" placeholder="请输入学号" bindinput="useridinput" />
         </view>
         <view class="line"></view>
         <!--密码-->
         <view class="inputview">
             <image class="keyimage" src="/images/password.png"></image>
             <label class="registerlab">密码</label>
-            <input class="inputtext"  placeholder="请输入密码" bindinput="passwordInput" />
+            <input class="inputtext"  placeholder="请输入密码" bindinput="passwordinput" />
         </view>
         <view class="line"></view>
         <!--昵称-->
         <view class="inputview">
             <image class="keyimage" src="/images/nickname.png"></image>
             <label class="registerlab">昵称</label>
-            <input class="inputtext" placeholder="请输入昵称" bindinput="nicknameInput" />
+            <input class="inputtext" placeholder="请输入昵称" bindinput="nicknameinput" />
         </view>
         <view class="line"></view>
         <!--电话-->
         <view class="inputview">
             <image class="keyimage" src="/images/phone.png"></image>
             <label class="registerlab">电话</label>
-            <input class="inputtext"  placeholder="请输入电话" bindinput="phoneInput" />
+            <input class="inputtext"  placeholder="请输入电话" bindinput="phoneinput" />
         </view>
         <view class="line"></view>
         <!--地址-->
         <view class="inputview">
             <image class="keyimage" src="/images/address.png"></image>
             <label class="registerlab">地址</label>
-            <input class="inputtext"  placeholder="请输入地址" bindinput="addressInput" />
+            <input class="inputtext"  placeholder="请输入地址" bindinput="addressinput" />
         </view>
     </view>
     <!--注册-->
