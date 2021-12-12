@@ -6,7 +6,7 @@
 
 <view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box">
   <image class='left icon' src='/images/user.png'></image>
-  <input class='input' bindinput='nameInput' value="{{Name}}"></input>
+  <input class='input' bindinput='nameinput' value="{{Name}}"></input>
 </view>
 
 <view class='line'></view>
@@ -15,18 +15,18 @@
   <image class='left icon' src='/images/money.png'></image>
  
  
-  <input class='input' bindinput='priceInput' value="{{Price}}"></input>
+  <input class='input' bindinput='priceinput' value="{{Price}}"></input>
 </view>
 
 <view class='line'></view>
 <view class='main row'>
   <image class='left icon' src='/images/goumai.png'></image>
-  <input class='input' bindinput='numInput' placeholder='数量' value="{{Num}}"></input>
+  <input class='input' bindinput='numinput' placeholder='数量' value="{{Num}}"></input>
 </view>
 <view class='line'></view>
 <view class='main row'>
   <image class='left icon' src='/images/imagesst.png'></image>
-  <input class='input' bindinput='textInput' value="{{Text}}" ></input>
+  <input class='input' bindinput='textinput' value="{{Text}}" ></input>
 </view>
 <view class='line'></view>
 <!-- <view class="weui-uploader">

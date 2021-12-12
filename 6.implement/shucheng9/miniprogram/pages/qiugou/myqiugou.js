@@ -14,12 +14,12 @@ Page({
   data: {
     qiugouObj: ""
   },
-  addQiugou: function (params) {
+  addqiugou: function (params) {
     wx.navigateTo({
       url: '/pages/qiugou/addqiugou'
     })
   },
-  Xiugai: function (e) {
+  xiugai: function (e) {
 
     wx.navigateTo({
       url: '/pages/qiugou/xiugaiinfo?id=' + e.currentTarget.dataset.id

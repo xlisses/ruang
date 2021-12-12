@@ -20,23 +20,23 @@ Page({
       Num:0
   },
   // 上传图片
-  nameInput(e){
+  nameinput(e){
     console.log(e.detail)
       xiugainame=e.detail.value
   },
-  priceInput(e){
+  priceinput(e){
     console.log(e.detail)
       xiugaiprice=e.detail.value
   },
-  textInput(e){
+  textinput(e){
     console.log(e.detail.value)
       xiugaitext=e.detail.value
   },
-  numInput(e){
+  numinput(e){
     console.log(e.detail.value)
       xiugainum=e.detail.value
   },
-  chooseImg: function (e) {
+  chooseimg: function (e) {
     var that = this;
     var imgs = this.data.imgs;
     if (imgs.length >= 9) {
@@ -50,7 +50,7 @@ Page({
       }, 2500);
       return false;
     }
-    wx.chooseImage({
+    wx.chooseimage({
       // count: 1, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
@@ -77,7 +77,7 @@ Page({
     });
   },
   // 删除图片
-  deleteImg: function (e) {
+  deleteimg: function (e) {
     var imgs = this.data.imgs;
     var index = e.currentTarget.dataset.index;
     imgs.splice(index, 1);
@@ -86,7 +86,7 @@ Page({
     });
   },
   // 预览图片
-  previewImg: function (e) {
+  previewimg: function (e) {
     //获取当前图片的下标
     var index = e.currentTarget.dataset.index;
     //所有图片
@@ -122,19 +122,19 @@ Page({
     })
   },
  
-  bindPickerChange(e) {
+  bindpickerchange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
     })
   },
-  clearFont() {
+  clearfont() {
     this.setData({
       placeholder: ''
     })
   },
  
-  bindRegionChange(e) {
+  bindregionchange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       region: e.detail.value

@@ -18,16 +18,13 @@ Page({
     value:"保存", 
   
   },
-  nameInput(e){
-    console.log(e.detail)
+  nameinput(e){
     xiugainame=e.detail.value
   },
   stuinput(e){
-    console.log(e.detail)
     xiugaistunum=e.detail.value
   },
   phoneinput(e){
-    console.log(e.detail)
     xiugaiphonenum=e.detail.value
   },
   xiugai:function(){
@@ -115,25 +112,6 @@ Page({
                 },1500)
                }
             })
-            //const db = wx.cloud.database();
-            
-              //db.collection('img').add({
-              //  data: {
-              //   imglist: fileID
-                  
-              //  },
-              //  success: function () {
-              //    console.log('[上传地址] 成功：')
-                  
-              //  },
-              //  fail: function () {
-              //    wx.showToast({
-              //      title: '图片存储失败',
-              //      'icon': 'none',
-              //      duration: 3000
-              //    })
-              //  }
-             // }); 
           },
            fail: e => {
             console.error('[上传图片] 失败：', e)

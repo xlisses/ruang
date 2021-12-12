@@ -41,6 +41,6 @@
 <view class="sendmessage">
   <input class="chat-input" type="emoji" bindinput="bindChange" confirm-type="done" value='{{input}}' placeholder="" placeholder="请输入"/>
   <button class="btn" type="primary" plain="true" bindtap='send'  style="width: 181rpx; height: 80rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">发送</button>
-  <input style='display:none' type="" bindinput="bindChange" confirm-type="done" placeholder="" />
+  <input style='display:none' type="" bindinput="bindchange" confirm-type="done" placeholder="" />
 
 </view>

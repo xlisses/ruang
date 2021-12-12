@@ -45,7 +45,7 @@ Page({
     var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
 
   },
-  txtInput: function (e) {
+  txtinput: function (e) {
     this.setData({
       booktext: e.detail.value
     })
@@ -57,7 +57,7 @@ Page({
     })
   },
 
-  OK: function (e) {
+  ok: function (e) {
     var that = this;
     // var date = util;
     wx.cloud.database().collection('book').doc(that.data.list._id).get({

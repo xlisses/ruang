@@ -43,22 +43,22 @@ Page({
     })
   },
 
-  nameInput(e) {
+  nameinput(e) {
     this.setData({
       bookname: e.detail.value
     })
   },
-  priceInput(e) {
+  priceinput(e) {
     this.setData({
       bookprice: e.detail.value
     })
   },
-  textInput(e) {
+  textinput(e) {
     this.setData({
       booktext: e.detail.value
     })
   },
-  numInput(e) {
+  numinput(e) {
     this.setData({
       num: e.detail.value
     })

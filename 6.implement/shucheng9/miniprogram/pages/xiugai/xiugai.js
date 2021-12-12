@@ -11,43 +11,43 @@ Page({
     booktext: '',
     college: '',
     userid: '',
-    bookimg:'',
-    speciality:'',
+    bookimg: '',
+    speciality: '',
     success: false,
-    list:[]
-    
+    list: []
+
   },
-  nameInput: function (e) {
-    
+  nameinput: function (e) {
+
     this.setData({
-     bookname: e.detail.value
-    
-  })
+      bookname: e.detail.value
+
+    })
   },
-  priceInput: function (e) {
+  priceinput: function (e) {
     this.setData({
       price: e.detail.value
     })
   },
-  textInput: function (e) {
+  textinput: function (e) {
     this.setData({
       booktext: e.detail.value
     })
   },
-  collegeInput: function (e) {
+  collegeinput: function (e) {
     this.setData({
       college: e.detail.value
     })
   },
-  SpecialityInput: function (e) {
+  specialityinput: function (e) {
     this.setData({
       speciality: e.detail.value
     })
   },
-  bokimg:function(e) {
-    
+  bokimg: function (e) {
+
     wx.chooseImage({
-      
+
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       count: 4,
@@ -60,36 +60,16 @@ Page({
         const name = Math.random() * 1000000;
         const cloudPath = name + filePath.match(/\.[^.]+?$/)[0]
         wx.cloud.uploadFile({
-          cloudPath,//云存储图片名字
-          filePath,//临时路径
+          cloudPath, //云存储图片名字
+          filePath, //临时路径
           success: res => {
             console.log('[上传图片] 成功：', res)
             var fileID = res.fileID;
             console.log(fileID)
-            imglist=imglist.concat(fileID)
+            imglist = imglist.concat(fileID)
             //把图片存到imglist集合表
-            console.log(imglist);
-            //const db = wx.cloud.database();
-            
-              //db.collection('img').add({
-              //  data: {
-              //   imglist: fileID
-                  
-              //  },
-              //  success: function () {
-              //    console.log('[上传地址] 成功：')
-                  
-              //  },
-              //  fail: function () {
-              //    wx.showToast({
-              //      title: '图片存储失败',
-              //      'icon': 'none',
-              //      duration: 3000
-              //    })
-              //  }
-             // }); 
           },
-           fail: e => {
+          fail: e => {
             console.error('[上传图片] 失败：', e)
           },
           complete: () => {
@@ -100,119 +80,58 @@ Page({
     })
   },
 
- 
-  sureTap:function(){
-   var that=this
-  console.log(that.data)
-   wx.cloud.database().collection('book').doc(that.data.list._id).update({
-      data:{
-    BookId: that.data._id,
-    BookName: that.data.bookname,
-    Pirce: that.data.price,
-    BookText: that.data.booktext,
-    College: that.data.college,
-    Speciality:that.data.speciality,
-    UserId: that.data.userid,
 
-    BookImg: that.data.bookimg,
+  suretap: function () {
+    var that = this
+    console.log(that.data)
+    wx.cloud.database().collection('book').doc(that.data.list._id).update({
+      data: {
+        BookId: that.data._id,
+        BookName: that.data.bookname,
+        Pirce: that.data.price,
+        BookText: that.data.booktext,
+        College: that.data.college,
+        Speciality: that.data.speciality,
+        UserId: that.data.userid,
+
+        BookImg: that.data.bookimg,
       }
-    
+
 
     })
     wx.showModal({
       title: '修改成功',
-     
-      showCancel: false,//是否显示取消按钮
-     
-      cancelColor:'skyblue',//取消文字的颜色
-      confirmText:"确定",//默认是“确定”
-      confirmColor: 'skyblue',//确定文字的颜色
+
+      showCancel: false, //是否显示取消按钮
+
+      cancelColor: 'skyblue', //取消文字的颜色
+      confirmText: "确定", //默认是“确定”
+      confirmColor: 'skyblue', //确定文字的颜色
       success: function (res) {
-         if (res.confirm) {
-            wx.switchTab
-             ({
-              url: '../goumai/goumai',
-            })
-         } 
+        if (res.confirm) {
+          wx.switchTab({
+            url: '../goumai/goumai',
+          })
+        }
 
-         }
-      
-     
-   })
-
-
-
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
-    var id=options.id  
+
+    var id = options.id
     wx.cloud.database().collection('book')
-    .doc(id)
-     
+      .doc(id)
+
       .get()
       .then(res => {
         this.setData({
           list: res.data
         })
       })
-      },
-
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-
-
-
-
 })
-

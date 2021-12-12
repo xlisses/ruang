@@ -22,10 +22,10 @@
 <view class='line'></view>
 
 <view style="width: 750rpx; height: 374rpx; display: block; box-sizing: border-box">
-    <textarea class='txt' bindblur='txtInput' placeholder='备注' placeholder-class='beizhu' style="position: relative; width: 647rpx; background: #d3d3d3; height: 279rpx; display: block; box-sizing: border-box; left: 22rpx; top: 47rpx"></textarea>
+    <textarea class='txt' bindblur='txtinput' placeholder='备注' placeholder-class='beizhu' style="position: relative; width: 647rpx; background: #d3d3d3; height: 279rpx; display: block; box-sizing: border-box; left: 22rpx; top: 47rpx"></textarea>
 </view>
 <view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box;padding-left: 20px;font-size:20px">数量为：
 
     <input class='num' bindinput='numinput' placeholder='数量' style="width: 214rpx; height: 39rpx; display: block; box-sizing: border-box"></input>
 </view>
-<button class='OK' bindtap="OK" style='background-color: cadetblue;'>确定购买</button>
+<button class='OK' bindtap="ok" style='background-color: cadetblue;'>确定购买</button>

@@ -32,8 +32,7 @@
     "pages/shoumai/shoumai",
     "pages/shoumai_dtl/shoumai_dtl",
     "pages/xiugai/xiugai",
-    "pages/logs/logs",
-    "pages/test/test"
+    "pages/logs/logs"
     
   ],
   "window": {

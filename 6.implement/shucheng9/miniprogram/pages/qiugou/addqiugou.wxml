@@ -1,5 +1,3 @@
-
-
 <view class='bg' style="width: 750rpx; height: 60rpx; display: block; box-sizing: border-box;background-color: transparent;">
 
 <text  style="display: flex; text-align: center; justify-content: center; width: 750rpx; height: 59rpx; box-sizing: border-box"></text>
@@ -7,7 +5,7 @@
 
 <view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box">
   <image class='left icon' src='/images/user.png'></image>
-  <input class='input' bindinput='nameInput' placeholder='名称'></input>
+  <input class='input' bindinput='nameinput' placeholder='名称'></input>
 </view>
 
 <view class='line'></view>
@@ -16,18 +14,18 @@
   <image class='left icon' src='/images/money.png'></image>
  
  
-  <input class='input' bindinput='priceInput' placeholder='价格'></input>
+  <input class='input' bindinput='priceinput' placeholder='价格'></input>
 </view>
 
 <view class='line'></view>
 <view class='main row'>
   <image class='left icon' src='/images/goumai.png'></image>
-  <input class='input' bindinput='numInput' placeholder='数量'></input>
+  <input class='input' bindinput='numinput' placeholder='数量'></input>
 </view>
 <view class='line'></view>
 <view class='main row'>
   <image class='left icon' src='/images/imagesst.png'></image>
-  <input class='input' bindinput='textInput' placeholder='求购条件'></input>
+  <input class='input' bindinput='textinput' placeholder='求购条件'></input>
 </view>
 <view class='line'></view>
 
