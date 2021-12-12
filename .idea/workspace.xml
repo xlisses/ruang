@@ -2,7 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef73f45-f253-4dd3-a8d2-8cf8159e9ff9" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/1.projectplan/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.projectplan/书承体验版.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.projectplan/隐私保证.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.feasibility/数据字典new.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/images/find.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/images/select_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find/find.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find/find.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find/find.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find/find.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find_detail/find_detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find_detail/find_detail.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find_detail/find_detail.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/find_detail/find_detail.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/logs/login/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/logs/login/login.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/logs/login/login.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/logs/login/login.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myinfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myinfo.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myinfo.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myxiugaiinfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myxiugaiinfo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myxiugaiinfo.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myxiugaiinfo.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/report/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/report/report.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/report/report.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/report/report.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shaixuan/shaixuan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shaixuan/shaixuan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shaixuan/shaixuan.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shaixuan/shaixuan.wxss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meeting/会议纪要17.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meeting/会议纪要18.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.feasibility/数据字典.doc" beforeDir="false" afterPath="$PROJECT_DIR$/2.feasibility/数据字典.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.overall/软件用户手册(SUM).doc" beforeDir="false" afterPath="$PROJECT_DIR$/4.overall/软件用户手册(SUM).doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/admin/admin.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/admin/admin.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/buy/buy.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/buy/buy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/buy/buy.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/buy/buy.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/dealbr/dealbr.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/dealbr/dealbr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai/goumai.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai/goumai.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai/goumai.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai/goumai.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai/goumai.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai/goumai.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai_detail/goumai_detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai_detail/goumai_detail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai_detail/goumai_detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/goumai_detail/goumai_detail.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/login/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/login/login.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/login/login.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/login/login.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/login/login.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/my.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/my.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/my.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myaddress.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myaddress.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myaddress.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myaddress.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myaddress.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myaddress.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myorder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myorder.json" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myinfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myorder.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/my/myorder.wxss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/order.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/order.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/order.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/order.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/ordernew.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/ordernew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/ordernew.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/ordernew.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/ordernew.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/order/ordernew.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/addqiugou.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/addqiugou.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/addqiugou.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/addqiugou.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/myqiugou.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/myqiugou.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/myqiugou.json" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/myqiugou.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/myqiugou.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/myqiugou.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/qiugou.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/qiugou.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/qiugou.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/qiugou.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/qiugou.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/qiugou.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/xiugaiinfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/xiugaiinfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/xiugaiinfo.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou/xiugaiinfo.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou_detail/qiugou_detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou_detail/qiugou_detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou_detail/qiugou_detail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou_detail/qiugou_detail.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou_detail/qiugou_detail.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/qiugou_detail/qiugou_detail.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/register/register.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/register/register.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/register/register.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/register/register.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shangjia/shangjia.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shangjia/shangjia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shangjia/shangjia.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shangjia/shangjia.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shangjia/shangjia.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shangjia/shangjia.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai/shoumai.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai/shoumai.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai/shoumai.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai/shoumai.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai/shoumai.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai/shoumai.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai_dtl/shoumai_dtl.js" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai_dtl/shoumai_dtl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai_dtl/shoumai_dtl.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/miniprogram/pages/shoumai_dtl/shoumai_dtl.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/shucheng9/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/shucheng9/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.implement/计算机编程手册(CPM).docx" beforeDir="false" afterPath="$PROJECT_DIR$/6.implement/计算机编程手册(CPM).docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/最终评审.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/1.projectplan/最终评审.pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
