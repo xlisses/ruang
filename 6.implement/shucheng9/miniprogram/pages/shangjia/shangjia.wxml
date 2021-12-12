@@ -22,6 +22,11 @@
 
 <view class='line'></view>
 
+
+
+
+
+
 <view class='main row'>
   <image class='left icon' src='/images/list.png'></image>
   <input class='input' bindinput='textInput' placeholder='介绍（作者，出版社等）'></input>
@@ -40,6 +45,12 @@
         <text class='option' wx:for='{{selectData1}}' wx:key='this' data-index='{{index}}' catchtap='optionTap1'>{{item}}</text>
     </view>
 </view>
+
+
+
+
+
+
 </view>
 
 <view class='line' ></view>
@@ -51,9 +62,9 @@
         <text class='select_text'>{{selectData2[index2]}}</text>
         <image class='select_img {{selectShow2&&"select_img_rotate"}}' src='../../images/select_img.png'  background-size="contain"></image> 
     </view>
-    <cover-view class='option_box' style='height:{{selectShow2?(selectData2.length>5?325:selectData2.length*50):0}}rpx;'>
+    <view class='option_box' style='height:{{selectShow2?(selectData2.length>5?325:selectData2.length*50):0}}rpx;'>
         <text class='option' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
-    </cover-view>
+    </view>
 </view>
 
 </view>
