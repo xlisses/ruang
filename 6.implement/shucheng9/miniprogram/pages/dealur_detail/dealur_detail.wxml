@@ -1,0 +1,33 @@
+<view style="position:relative; width: 100%; min-height: 100px">
+    <text class="container" style="font-size: 50rpx;">用户举报</text>
+</view>
+<view
+    style="position: relative; width: 750rpx; background: #d3d3d3; min-height: 100px; height: 176rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <!--学号-->
+    <view class="view">
+        <image class="image" src="/images/userid.png"></image>
+        <label class="lab">学号</label>
+        <text class="text">{{list.StuNum}}</text>
+    </view>
+    <view class="line"></view>
+    <!--昵称-->
+    <view class="view">
+        <image class="image" src="/images/nickname.png"></image>
+        <label class="lab">昵称</label>
+        <text class="text">{{list.UserName}}</text>
+    </view>
+    <view class="line"></view> 
+    <!--备注-->
+    <view class="view">
+        <text class="note" style="position: relative; left: 0rpx; top: 4rpx">{{list.URptext}}</text>
+    </view>
+    <view class="line"></view>
+</view>
+<view class="btnView" style="position: relative; left: 0rpx; top: 516rpx">
+    <button class="btn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="ignore"
+        style="width: 284rpx; height: 94rpx; display: block; box-sizing: border-box; left: -158rpx; top: 24rpx; position: relative">忽略该举报</button>
+    <button class="btn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="freeze"
+        style="width: 284rpx; height: 94rpx; display: block; box-sizing: border-box; left: 160rpx; top: -79rpx; position: relative">冻结用户</button>
+</view>

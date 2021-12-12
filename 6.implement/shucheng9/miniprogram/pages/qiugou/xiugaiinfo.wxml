@@ -1,0 +1,57 @@
+<!--pages/qiugou/xiugaiinfo.wxml-->
+<view class='bg' style="width: 750rpx; height: 60rpx; display: block; box-sizing: border-box;background-color: transparent;">
+
+<text  style="display: flex; text-align: center; justify-content: center; width: 750rpx; height: 59rpx; box-sizing: border-box"></text>
+</view>
+
+<view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/user.png'></image>
+  <input class='input' bindinput='nameInput' value="{{Name}}"></input>
+</view>
+
+<view class='line'></view>
+
+<view class='main row'>
+  <image class='left icon' src='/images/money.png'></image>
+ 
+ 
+  <input class='input' bindinput='priceInput' value="{{Price}}"></input>
+</view>
+
+<view class='line'></view>
+<view class='main row'>
+  <image class='left icon' src='/images/goumai.png'></image>
+  <input class='input' bindinput='numInput' placeholder='数量' value="{{Num}}"></input>
+</view>
+<view class='line'></view>
+<view class='main row'>
+  <image class='left icon' src='/images/imagesst.png'></image>
+  <input class='input' bindinput='textInput' value="{{Text}}" ></input>
+</view>
+<view class='line'></view>
+<!-- <view class="weui-uploader">
+  <view class="img-v weui-uploader__bd">
+    <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image class='weui-uploader__img '
+                src="{{item}}"
+                data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
+                  <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+        </image>
+    </view>
+     
+     
+      <view class="weui-uploader__input-box pic" bindtap="chooseImg"> </view>
+  </view>
+  <button class="upload-img-btn" bindtap="chooseImg" type='primary'>拍照  / 上传</button>
+</view> -->
+
+
+<view class="footer" style="width: 100%;position: absolute;bottom: 10%;">
+  <button class="addqiugou" bindtap="delqiugoulist" style="bottom: 30rpx; display: flex; justify-content: center; align-items: center;">
+      删除该求购
+      </button>
+<button class="addqiugou" bindtap="xiugaiinfo" style="display: flex; justify-content: center; align-items: center;">
+      修改
+      </button>
+      
+    </view>

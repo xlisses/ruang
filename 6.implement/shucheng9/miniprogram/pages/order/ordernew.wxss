@@ -1,0 +1,81 @@
+.text{
+  font-size: 20px; 
+   position: relative; 
+   text-align: center; 
+   color: black; 
+   width: 100%rpx; 
+   height: 55rpx; 
+   display: block; 
+   
+ }
+ .daoghang{
+   width: 100%rpx; 
+   height: 55rpx; 
+   display: block; 
+ }
+ .daohang .nofin{
+   width: 50%; 
+   height: 57rpx; 
+   display: block; 
+   box-sizing: border-box ;
+   
+   text-align: center;
+ }
+ .daohang .yesfin{
+   width: 50%; 
+   height: 57rpx; 
+   display: block; 
+   box-sizing: border-box; 
+   position: relative; 
+   left: 50%; 
+   top: -57rpx;
+   text-align: center;
+   background-color: bisque; 
+ }
+ 
+ .vw{
+   width: 100%; 
+   height: 239rpx; 
+   display: block; 
+   box-sizing: border-box; 
+ }
+ .bokimg{
+   width: 33%; 
+   height: 200rpx;   
+   display: inline-block; 
+   box-sizing: border-box;
+   background-color: black;
+ }
+ .bokname{
+   position: relative; 
+   left: 38%; 
+   top: -179rpx; 
+   font-size: 20px;
+ }
+ .price{
+   position: relative; 
+   left: 40%; 
+   top: -141rpx;
+   font-size: 25px;
+ }
+ .shouhuo{
+   position: relative; 
+   left: 30%; 
+   top: -211rpx; 
+   
+   height: 71rpx; 
+   display: block;
+   background-color:transparent;
+ }
+ .line{
+   width: 100%;
+    height: 4rpx; 
+    display: block; 
+    box-sizing: border-box; 
+    background-color: black;
+ }
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,92 @@
+<!--pages/shangjia/shangjia.wxml-->
+
+
+<view class='bg' style="width: 750rpx; height: 60rpx; display: block; box-sizing: border-box;background-color: transparent;">
+
+<text  style="display: flex; text-align: center; justify-content: center; width: 750rpx; height: 59rpx; box-sizing: border-box; margin-top: 10px">上架商品信息</text>
+</view>
+
+<view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/user.png'></image>
+  <input class='input' bindinput='nameInput' placeholder='名称'></input>
+</view>
+
+<view class='line'></view>
+
+<view class='main row'>
+  <image class='left icon' src='/images/money.png'></image>
+ 
+ 
+  <input class='input' bindinput='priceInput' type='number' placeholder='价格' value="{{value}}"></input>
+</view>
+
+<view class='line'></view>
+
+
+
+
+
+
+<view class='main row'>
+  <image class='left icon' src='/images/list.png'></image>
+  <input class='input' bindinput='textInput' placeholder='介绍（作者，出版社等）'></input>
+</view>
+
+<view class='line'></view>
+
+<view class='main row' style="width: 750rpx; height: 99rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/school.png'></image>
+  <view class='select_box'>
+    <view class='select' catchtap='selectTap1'>
+        <text class='select_text'>{{selectData1[index1]}}</text>
+        <image class='select_img {{selectShow1&&"select_img_rotate"}}' src='../../images/select_img.png'  background-size="contain"></image> 
+    </view>
+    <view class='option_box' style='height:{{selectShow1?(selectData1.length>5?325:selectData1.length*50):0}}rpx;'>
+        <text class='option' wx:for='{{selectData1}}' wx:key='this' data-index='{{index}}' catchtap='optionTap1'>{{item}}</text>
+    </view>
+</view>
+
+
+
+
+
+
+</view>
+
+<view class='line' ></view>
+
+<view class='main row' style="width: 750rpx; height: 99rpx; display: flex; box-sizing: border-box">
+  <image class='left icon' src='/images/school.png'></image>
+  <view class='select_box'>
+    <view class='select' catchtap='selectTap2'>
+        <text class='select_text'>{{selectData2[index2]}}</text>
+        <image class='select_img {{selectShow2&&"select_img_rotate"}}' src='../../images/select_img.png'  background-size="contain"></image> 
+    </view>
+    <view class='option_box' style='height:{{selectShow2?(selectData2.length>5?325:selectData2.length*50):0}}rpx;'>
+        <text class='option' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
+    </view>
+</view>
+
+</view>
+<view class='line'></view>
+
+
+<view class='main row'>
+  <image class='left icon' src='/images/num.png'></image>
+  <input class='input' bindinput='numInput' placeholder='数量'></input>
+</view>
+<view class='line'></view>
+
+
+
+<view class='main row'>
+  <image class='left icon' src='/images/pic.png'></image>
+  
+  <button  bindtap='bokimg'  style="width: 40%; height: 80rpx; display: block; box-sizing: border-box; left: -177rpx; top: 15%; position: relative;background-color: rgb(216, 232, 233);"><text class="txt">上传图片</text></button>
+</view>
+
+
+
+<button class='sureBtn' type='primary' bindtap='sureTap' style="position: fixed; left: 20%; top: 80%; width: 60%; height: 5%; display: block; box-sizing: border-box">确定上架</button>
+
+

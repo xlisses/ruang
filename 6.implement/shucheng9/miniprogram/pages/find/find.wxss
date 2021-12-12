@@ -1,0 +1,113 @@
+.top_contain {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 30rpx;
+    box-sizing: border-box;
+    background-color: #dfdede;
+    height: 106rpx;
+    align-items: center;
+}
+
+.search_box {
+    width: 80%;
+    height: 66rpx;
+    border-radius: 33rpx 0 0 33rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.search_box image {
+    padding-left: 30rpx;
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.search_box input {
+    padding-left: 10rpx;
+    font-size: 28rpx;
+    letter-spacing: 2rpx;
+    color: rgb(167, 167, 167);
+    background: #fff;
+    height: 66rpx;
+    width: 500rpx;
+}
+
+.search {
+    width: 20%;
+    height: 66rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(75, 73, 73);
+    color: #fff;
+    font-size: 28rpx;
+    border-radius: 0 33rpx 33rpx 0;
+    letter-spacing: 4rpx;
+}
+
+.input{
+    font-size: 30rpx;
+    color: gray;
+    flex-grow: 1;
+    border: 3rpx solid black;
+    position: relative;
+}
+.select_box{
+    width:60%;
+    height:70%;
+    border-radius: 14rpx;
+    position: relative;
+    left: 25%; 
+    top: -45rpx;
+  }
+  .select_box .select{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    padding: 0 10rpx;
+    border:1px solid rgb(0, 0, 0);
+  }
+  .select_box .select .select_text{
+    margin-left:30rpx;
+    font-size: 33rpx;
+    color: #777777;
+    line-height: 28rpx;
+    flex: 1;
+    
+    
+  }
+  .select_box .select .select_img{
+    width: 30rpx;
+    height: 30rpx;
+    display: block;
+    transition:transform 0.3s;
+  }
+  .select_box .select .select_img_rotate{
+    transform:rotate(180deg); 
+  }
+  .select_box .option_box{
+    position: absolute;
+    top: calc(100% - 1px);
+    width: 100%;
+    box-sizing: border-box;
+    height: 0;
+    overflow-y: auto;
+    background: rgb(122, 118, 118);
+    transition: height 0.3s;
+    border-left:1px solid #efefef;
+    border-right:1px solid #efefef;
+    z-index: 5;
+  }
+  .select_box .option_box .option{
+    display: block;
+    line-height: 30rpx; 
+    font-size: 30rpx;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    padding: 10rpx;
+  }

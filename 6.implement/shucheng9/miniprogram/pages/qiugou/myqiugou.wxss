@@ -1,0 +1,57 @@
+/* pages/qiugou/myqiugou.wxss */
+.myqiugouitems{
+  width:100%;
+  height: 8rem;
+  background: #ffffff;
+  text-align:center;
+  display: grid;
+  grid-template-columns: 33% 64%;
+  grid-template-rows: 100% ;
+  
+  padding-left: 5px;
+  border-bottom: 1px solid #c9c1c1;
+}
+.myqiugouimg{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.myqiugouimg image{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  background-color: #ebe2e2;
+  
+}
+.myqiugouinfo{
+  display: grid;
+  grid-template-columns: 95%;
+  grid-template-rows: 20% 50% 20% ;
+
+}
+.myqiugouimg img{
+  src: url(https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg);
+}
+.myqiugoubottom{
+  position: fixed;
+  display: flex;
+  float: left;
+  width: 80%;
+  bottom:10px;
+  justify-content: center;
+}
+.myqiugoubottom .addqiugou{
+  width: 35%;
+  background-color: lightsalmon;
+  left: 30px;
+  font-size: 15px;
+  padding: 10px;
+  
+}
+.myqiugoubottom .myqiugou{
+  width: 35%;
+  background-color: lightsalmon;
+  left: 40px;
+  font-size: 15px;
+  padding: 10px;
+}

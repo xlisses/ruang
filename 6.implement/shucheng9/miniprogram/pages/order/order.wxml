@@ -1,0 +1,16 @@
+<view class="text" >我的订单</view>
+<view  class ='daohang'>
+  <view  class='nofin' bindtap='nofin' >未完成</view>
+  <view  class='yesfin' bindtap='yesfin' >已完成</view>
+</view>
+<view wx:for="{{list}}" wx:key="id" >
+<view class="vw"   bindtap='dtl' data-id="{{item._id}}" >
+<image for="" class="bokimg" src="{{item.BookImg}}"></image>
+<view for="" class="bokname" >{{item.BookName}}</view>
+<view for="" class="price" >￥{{item.Price}}</view>
+<button  class='shouhuo' data-id="{{item._id}}"catchtap ='shouhuo' type='primary' style="width: 30%;">确认收货</button>
+
+
+</view>
+<view class='line' ></view>
+</view>

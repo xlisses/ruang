@@ -1,0 +1,25 @@
+<!--pages/qiugou/myqiugou.wxml-->
+<view class="myqiugouitems" wx:for="{{qiugouObj}}" >
+      <view class="myqiugouimg">
+            <image src="{{item.BookImg[0]}}"  
+             ></image>
+      </view>
+      <view class="myqiugouinfo">
+            <view class="myqiugouname">
+            <view class="myqiugoubookname" style="float: left;margin: 10px;">{{item.BookName}}</view>
+            
+            </view>
+            <view class="myqiugoutip" style="font-variant: normal left; margin: 10px; font-size: 15px; text-overflow: ellipsis; overflow: hidden; font-size: 11px;">{{item.BookText}}</view>
+            <view class="myqiugubottom">
+            <view class="myqiugouprice" style="float: left; padding-left: 10px;">￥{{item.Price}}</view>
+            <view class="myqiugounum" style="float: left; padding-left: 30px;">{{item.Stock}}本</view>
+            <button class="myqiugouorfer" bindtap="Xiugai" data-id="{{item._id}}" style="padding: 5px; width: 80px; height: 30px; font-size: 13px; background-color: rgb(132, 189, 236);border: 1px solid #1111;position: absolute; right: 10px;">修改</button>
+            </view>
+      </view>
+      
+</view>
+<view class="footer" style="width: 100%;position: fixed;bottom: 5%;">
+<button type='primary' bindtap="addQiugou" style="position: fixed; left: 20%; top: 80%; width: 60%; height: 5%; display: block; box-sizing: border-box">
+      新建求购
+      </button>
+    </view>

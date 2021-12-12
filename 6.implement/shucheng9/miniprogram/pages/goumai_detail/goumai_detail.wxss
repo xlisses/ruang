@@ -1,0 +1,62 @@
+/* pages/goumai_detail/goumai_detail.wxss */
+/* pages/qiugou_detail/qiugou_detail.wxss */
+.goumai_detailbottom{
+  position: fixed;
+  display: flex;
+  float: left;
+  width: 80%;
+  bottom:10px;
+  justify-content: center;
+  height: 40px;
+  padding-bottom: 30px;
+}
+.goumai_detailbottom .call{
+  position: fixed;
+  left: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
+  
+}
+.goumai_detailbottom .offer{
+  position: fixed;
+  right: 15%;
+  top: 90%;
+  width: 30%;
+  height: 6%;
+  display: block;
+  box-sizing: border-box
+}
+.info_title{
+  font-weight:bold;
+  color:rgba(46,11,245,0.67);
+  display:inline-block;
+  border-bottom:2px solid rgba(207,52,13,0.67);
+  font-size:20px;
+  padding-top:20px;
+}
+.info_txt{
+  padding-top: 20px;
+}
+.sinfo .report{
+  position: absolute;
+  
+  
+   width: 151rpx; 
+   height: 81rpx; 
+   left: 547rpx; 
+   top: 409rpx; 
+   display: block; 
+   box-sizing: border-box;
+   font-size: 15px;
+   background-color: rgb(141, 139, 139);
+}
+.sinfo_price{
+  font-size: 15px; 
+  top: 20rpx; 
+  position: relative; 
+  left: -8rpx;
+  padding-left:15px;
+}
