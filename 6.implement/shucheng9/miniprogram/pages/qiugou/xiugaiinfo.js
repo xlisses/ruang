@@ -2,39 +2,39 @@ const app = getApp()
 const db = wx.cloud.database()
 const qiugou = db.collection('book')
 var id
-var xiugaiprice=""
-var xiugainame=""
-var xiugaitext=""
-var xiugainum=""
+var xiugaiprice = ""
+var xiugainame = ""
+var xiugaitext = ""
+var xiugainum = ""
 Page({
- 
+
   /**
    * 页面的初始数据
    */
   data: {
-      imgs: [],
-      placeholder: '请选择',
-      Name:"",
-      Price:"",
-      Text:"",
-      Num:0
+    imgs: [],
+    placeholder: '请选择',
+    Name: "",
+    Price: "",
+    Text: "",
+    Num: 0
   },
   // 上传图片
-  nameinput(e){
+  nameinput(e) {
     console.log(e.detail)
-      xiugainame=e.detail.value
+    xiugainame = e.detail.value
   },
-  priceinput(e){
+  priceinput(e) {
     console.log(e.detail)
-      xiugaiprice=e.detail.value
+    xiugaiprice = e.detail.value
   },
-  textinput(e){
+  textinput(e) {
     console.log(e.detail.value)
-      xiugaitext=e.detail.value
+    xiugaitext = e.detail.value
   },
-  numinput(e){
+  numinput(e) {
     console.log(e.detail.value)
-      xiugainum=e.detail.value
+    xiugainum = e.detail.value
   },
   chooseimg: function (e) {
     var that = this;
@@ -69,7 +69,7 @@ Page({
             imgs.push(tempFilePaths[i]);
           }
         }
-         console.log(imgs);
+        console.log(imgs);
         that.setData({
           imgs: imgs
         });
@@ -98,30 +98,57 @@ Page({
       urls: imgs
     })
   },
- 
-  xiugaiinfo:function(){
-    qiugou.doc(id).update({
-      data:({
-        BookName:xiugainame,
-        BookPrice:parseFloat(xiugaiprice),
-        BookText:xiugaitext,
-        Stock:ParseInt(xiugainum)
-      }),
-      success:function (params) {
-        wx.showToast({
-          title: '修改成功！',
-          duration:1500
-        })
-        
-        setTimeout(function(params) {
-          wx.navigateBack({
-            delta: 0,
+
+  xiugaiinfo: function () {
+    if (xiugainame.length == 0) {
+      wx.showToast({
+        title: '名称不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (xiugaiprice.length == 0) {
+      wx.showToast({
+        title: '价格不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (xiugainum.length == 0) {
+      wx.showToast({
+        title: '数量不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (xiugaitext.length == 0) {
+      wx.showToast({
+        title: '求购条件不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else {
+      qiugou.doc(id).update({
+        data: ({
+          BookName: xiugainame,
+          Price: parseFloat(xiugaiprice),
+          BookText: xiugaitext,
+          Stock: parseInt(xiugainum)
+        }),
+        success: function (params) {
+          wx.showToast({
+            title: '修改成功！',
+            duration: 1500
           })
-        },1500)
-       }
-    })
+
+          setTimeout(function (params) {
+            wx.navigateBack({
+              delta: 0,
+            })
+          }, 1500)
+        }
+      })
+    }
+
   },
- 
+
   bindpickerchange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -133,7 +160,7 @@ Page({
       placeholder: ''
     })
   },
- 
+
   bindregionchange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -141,46 +168,46 @@ Page({
     })
   },
 
-  delqiugoulist:function(options){
-   var delid=id;
-  
-    qiugou.where(
-     {
-     _id:delid}).remove({
-       success:function (params) {
+  delqiugoulist: function (options) {
+    var delid = id;
+
+    qiugou.where({
+      _id: delid
+    }).remove({
+      success: function (params) {
         wx.showToast({
           title: '删除成功！',
-          duration:1500
+          duration: 1500
         })
-        
-        setTimeout(function(params) {
+
+        setTimeout(function (params) {
           wx.navigateBack({
             delta: 0,
           })
-        },1500)
-       }
-     })
+        }, 1500)
+      }
+    })
   },
- onLoad: function(options){
-   id=options.id
-  console.log(id)
-  qiugou.doc(id).get({
-    success: res=>{
-      // res.data 包含该记录的数据
-      console.log(res.data)
-      xiugainame=res.data.BookName
-      xiugaiprice=res.data.BookPrice
-      xiugaitext=res.data.BookText
-      xiugainum=res.data.Stock
-      this.setData({
-        Name:res.data.BookName,
-        Price:res.data.Price,
-        Text:res.data.BookText,
-        Num:res.data.Stock
-      })
-    }
-    
-  })
- },
+  onLoad: function (options) {
+    id = options.id
+    console.log(id)
+    qiugou.doc(id).get({
+      success: res => {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+        xiugainame = res.data.BookName
+        xiugaiprice = res.data.BookPrice
+        xiugaitext = res.data.BookText
+        xiugainum = res.data.Stock
+        this.setData({
+          Name: res.data.BookName,
+          Price: res.data.Price,
+          Text: res.data.BookText,
+          Num: res.data.Stock
+        })
+      }
+
+    })
+  },
 
 })

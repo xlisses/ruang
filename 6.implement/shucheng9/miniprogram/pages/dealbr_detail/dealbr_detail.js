@@ -8,6 +8,7 @@ Page({
       .doc(id)
       .get()
       .then(res => {
+        console.log(res.data)
         this.setData({
           list: res.data
         })
@@ -20,7 +21,7 @@ Page({
     //书本标记为已下架 
     wx.cloud.database().collection('book')
       .where({
-        BookId: this.data.list.BookId
+        _id: this.data.list.BookId
       }).update({
         // data 传入需要局部更新的数据
         data: {
@@ -31,7 +32,7 @@ Page({
         }
       })
     //举报标记为已解决
-    wx.cloud.database().collection('bookreport') 
+    wx.cloud.database().collection('bookreport')
       .where({
         StuNum: this.data.list.StuNum
       }).update({
@@ -41,11 +42,17 @@ Page({
         },
         success: function (res) {
           console.log(res)
+          wx.showToast({
+            title: '处理成功！',
+            duration: 1500
+          })
+          setTimeout(function (params) {
+            wx.navigateBack({
+              delta: 0,
+            })
+          }, 1500)
         }
       })
-    wx.navigateTo({
-      url: '/pages/dealbr/dealbr',
-    })
   },
   ignore: function () {
     //举报标记为已解决
@@ -59,11 +66,19 @@ Page({
         },
         success: function (res) {
           console.log(res)
+          wx.showToast({
+            title: '处理成功！',
+            duration: 1500
+          })
+
+          setTimeout(function (params) {
+            wx.navigateBack({
+              delta: 0,
+            })
+          }, 1500)
         }
       })
-    wx.navigateTo({
-      url: '/pages/dealbr/dealbr',
-    })
+
   }
 
 })

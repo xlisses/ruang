@@ -11,8 +11,8 @@
     </view>
 
     <view style="display: flex; width: 90%;height:100rpx; background-color: rgb(250, 250, 250,0.8) ;margin: 10rpx;align-items: center; border-radius: 15rpx;">
-        <label style="margin-left: 50rpx;">学号</label>
-        <input bindinput="stuinput" style="margin-left: 200rpx;" value="{{stunum}}"></input>
+        <label style="margin-left: 50rpx;">密码</label>
+        <input bindinput="pwdinput" style="margin-left: 200rpx;" value="{{password}}"></input>
 
     </view>
     <view style="display: flex; width: 90%;height:100rpx; background-color: rgb(255, 255, 255,0.8) ;margin: 10rpx;align-items: center; border-radius: 15rpx;">

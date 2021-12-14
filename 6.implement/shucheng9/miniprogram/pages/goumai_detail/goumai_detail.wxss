@@ -45,12 +45,13 @@
   
   
    width: 151rpx; 
+   font-size: 12px; 
    height: 81rpx; 
    left: 547rpx; 
    top: 409rpx; 
    display: block; 
    box-sizing: border-box;
-   font-size: 15px;
+   font-size: 16px;
    background-color: rgb(141, 139, 139);
 }
 .sinfo_price{

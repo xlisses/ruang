@@ -2,7 +2,6 @@ Page({
   data: {
     list:[]
   },
-
   dtl: function (e) {
 
     wx.navigateTo({
@@ -10,9 +9,7 @@ Page({
     })
     
   },
-
-
-  onLoad: function () {
+  onShow: function () {
     const db = wx.cloud.database({
       env: "shucheng-0gpblg8515636a51"
     });

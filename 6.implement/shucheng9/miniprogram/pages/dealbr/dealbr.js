@@ -8,7 +8,7 @@ Page({
       })
   
     },
-    onLoad: function () {
+    onShow: function () {
       const db = wx.cloud.database({
         env: "shucheng-0gpblg8515636a51"
       });
@@ -19,7 +19,7 @@ Page({
       }).get({
         //如果查询成功的话
         success: res => {
-  
+          
           this.setData({
             list: res.data,
           })

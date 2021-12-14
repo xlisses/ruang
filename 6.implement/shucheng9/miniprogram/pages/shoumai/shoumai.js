@@ -44,6 +44,7 @@ Page({
         Variety: 0,//购买售卖类型
         UserId: app.globalData.guserid,//自己卖的
         Stock: db.command.gt(0),//库存大于0
+        State: 0
       })
     cont.get({
       //如果查询成功的话

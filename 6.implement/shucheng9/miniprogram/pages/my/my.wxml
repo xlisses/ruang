@@ -10,7 +10,7 @@
       <view bindtap="tomyinfo" class="top_2">
             <view class="avator">
                   <open-data wx:if="{{userinfo}}" type="userAvatarUrl"></open-data>
-                  <image wx:if="{{!userinfo}}" src="{{userObj[0].AvaTor}}"  style="width: 629rpx; height: 140rpx; display: inline-block; box-sizing: content-box"></image>
+                  <image wx:if="{{!userinfo}}" src="{{userObj[0].AvaTor}}"  style="width: 140rpx; height: 140rpx; display: inline-block; box-sizing: content-box"></image>
             </view>
       </view>
 </view>

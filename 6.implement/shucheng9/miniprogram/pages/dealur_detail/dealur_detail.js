@@ -18,8 +18,8 @@ Page({
   },
   freeze: function () {
     //用户标记为已冻结
-    wx.where({
-      StuNum: this.data.list.StuNum
+    wx.cloud.database().collection('user').where({
+      _id: this.data.list.UserId
     }).update({
       // data 传入需要局部更新的数据
       data: {
@@ -40,11 +40,19 @@ Page({
         },
         success: function (res) {
           console.log(res)
+          console.log(res)
+          wx.showToast({
+            title: '处理成功！',
+            duration: 1500
+          })
+          setTimeout(function (params) {
+            wx.navigateBack({
+              delta: 0,
+            })
+          }, 1500)
         }
       })
-    wx.navigateTo({
-      url: '/pages/dealur/dealur',
-    })
+      
   },
   ignore: function () {
     //举报标记为已解决
@@ -58,11 +66,19 @@ Page({
         },
         success: function (res) {
           console.log(res)
+          console.log(res)
+          wx.showToast({
+            title: '处理成功！',
+            duration: 1500
+          })
+          setTimeout(function (params) {
+            wx.navigateBack({
+              delta: 0,
+            })
+          }, 1500)
         }
       })
-    wx.navigateTo({
-      url: '/pages/dealur/dealur',
-    })
+      
   }
 
 })

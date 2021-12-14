@@ -2,7 +2,7 @@ const app = getApp()
 const db = wx.cloud.database()
 const user = db.collection('user')
 var xiugainame=""
-var xiugaistunum=""
+var xiugaipassword=""
 var xiugaiphonenum=""
 var imglist=""
 Page({
@@ -13,7 +13,7 @@ Page({
   data: {
     username:"",
     phonenum:"",
-    stunum:"",
+    password:"",
     avator:"",
     value:"保存", 
   
@@ -21,17 +21,36 @@ Page({
   nameinput(e){
     xiugainame=e.detail.value
   },
-  stuinput(e){
-    xiugaistunum=e.detail.value
+  pwdinput(e){
+    xiugaipassword=e.detail.value
   },
   phoneinput(e){
     xiugaiphonenum=e.detail.value
   },
   xiugai:function(){
-    user.doc(app.globalData.guserid).update({
+    if (xiugainame.length == 0) {
+      wx.showToast({
+        title: '修改不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (xiugaiphonenum.length == 0) {
+      wx.showToast({
+        title: '修改不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (xiugaipassword.length == 0) {
+      wx.showToast({
+        title: '修改不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    }else{
+      user.doc(app.globalData.guserid).update({
       data:({
         UserName:xiugainame,
-        StuNum:xiugaistunum,
+        Pwd:xiugaipassword,
         PhoneNum:xiugaiphonenum
       }),
       success:function (params) {
@@ -47,6 +66,8 @@ Page({
         },1500)
        }
     })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面显示
@@ -59,12 +80,12 @@ Page({
         // res.data 包含该记录的数据
         console.log(res.data)
         xiugainame=res.data[0].UserName
-        xiugaistunum=res.data[0].StuNum
+        xiugaipassword=res.data[0].Pwd
         xiugaiphonenum=res.data[0].PhoneNum
         this.setData({
           username:res.data[0].UserName,
           phonenum:res.data[0].PhoneNum,
-          stunum:res.data[0].StuNum,
+          password:res.data[0].Pwd,
           avator:res.data[0].AvaTor
         })
       }

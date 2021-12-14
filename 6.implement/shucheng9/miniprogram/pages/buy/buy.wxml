@@ -28,4 +28,4 @@
 
     <input class='num' bindinput='numinput' placeholder='数量' style="width: 214rpx; height: 39rpx; display: block; box-sizing: border-box"></input>
 </view>
-<button class='OK' bindtap="ok" style='background-color: cadetblue;'>确定购买</button>
+<button class='OK' bindtap="ok" style='background-color: cadetblue;'>确定</button>

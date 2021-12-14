@@ -12,14 +12,14 @@ Page({
     list: [],
     bookid: '',
     bookname: '',
-    pirce: 0,
+    pirce: '',
     booktext: '',
     college: '',
     username: '',
     bookimg: '',
     speciality: '',
     userid: '',
-    num: 0,
+    num: '',
     phonenum: '',
   },
 
@@ -50,7 +50,7 @@ Page({
   },
   priceinput(e) {
     this.setData({
-      bookprice: e.detail.value
+      price: e.detail.value
     })
   },
   textinput(e) {
@@ -66,38 +66,64 @@ Page({
   addqiugoulist: function (params) {
     var that = this;
     const db = wx.cloud.database();
-    
-    db.collection('book').add({
-      data: {
-        BookName: that.data.bookname,
-        Price: parseFloat(that.data.bookprice),
-        BookText: that.data.booktext,
-        BookImg: imglist,
-        UserName: that.data.username,
-        Variety: 1,
-        UserId: app.globalData.guserid,
-        BookId: that.data._id,
-        College: "",
-        Speciality: "",
-        Stock: parseInt(that.data.num),
-        State: 1,
-        PhoneNum: that.data.phonenum,
-      },
-      success: function (params) {
-        wx.showToast({
-          title: '新建成功！',
-          duration: 1500
-        })
-
-        setTimeout(function (params) {
-          wx.navigateBack({
-            delta: 0,
+    if (that.data.bookname.length == 0) {
+      wx.showToast({
+        title: '名称不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (that.data.price.length == 0) {
+      wx.showToast({
+        title: '价格不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else if (that.data.num.length == 0) {
+      wx.showToast({
+        title: '数量不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    }else if (that.data.booktext.length == 0) {
+      wx.showToast({
+        title: '求购条件不能为空',
+        icon: 'loading',
+        duration: 1000
+      })
+    } else {
+      db.collection('book').add({
+        data: {
+          BookName: that.data.bookname,
+          Price: parseFloat(that.data.price),
+          BookText: that.data.booktext,
+          BookImg: imglist,
+          UserName: that.data.username,
+          Variety: 1,
+          UserId: app.globalData.guserid,
+          BookId: that.data._id,
+          College: "",
+          Speciality: "",
+          Stock: parseInt(that.data.num),
+          State: 1,
+          PhoneNum: that.data.phonenum,
+        },
+        success: function (params) {
+          wx.showToast({
+            title: '新建成功！',
+            duration: 1500
           })
-        }, 1500)
-      },
 
-    })
-    imglist = [""]
+          setTimeout(function (params) {
+            wx.navigateBack({
+              delta: 0,
+            })
+          }, 1500)
+        },
+
+      })
+      imglist = []
+    }
+
   },
   bokimg: function (params) {
     wx.chooseImage({

@@ -7,7 +7,7 @@ var id=""
 const db = wx.cloud.database()
 const report = db.collection('book')
 var text=""
- var bookname=""
+var bookname=""
 Page({
 
   /**
@@ -55,9 +55,7 @@ Page({
         BookId:id,
         BookName:bookname,
         BRptext:text,
-        state:"1"
-
-
+        State:1
       },
       success:function(params) {
         wx.showToast({

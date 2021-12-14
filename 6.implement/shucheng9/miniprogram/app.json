@@ -27,6 +27,7 @@
     "pages/qiugou/xiugaiinfo",
     "pages/qiugou_detail/qiugou_detail",
     "pages/register/register",
+    "pages/report/report",
     "pages/shaixuan/shaixuan",
     "pages/shangjia/shangjia",
     "pages/shoumai/shoumai",
@@ -44,8 +45,6 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
-
-
   "tabBar": {
   "color": "#a9b7b7",
   "selectedColor": "#11cd6e",

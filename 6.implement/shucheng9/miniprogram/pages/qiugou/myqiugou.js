@@ -45,5 +45,23 @@ Page({
 
     })
   },
+  onShow: function () {
+    this.onPullDownRefresh()
+  },
+  onPullDownRefresh: function () {
+    console.log(123)
+    qiugou.where({
+      UserId: app.globalData.guserid
 
+    }).get({
+      success: res => {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+        this.setData({
+          qiugouObj: res.data
+        })
+      }
+
+    })
+  },
 })

@@ -27,12 +27,19 @@ page {
     margin-top: 20px;
     flex: auto;
     height: 100%;
+    width: 90%; 
+    height: 1222rpx; 
+    display: block; 
+    box-sizing: border-box; 
+    left: 0rpx; 
+    top: 0rpx
 }
 
 .inputview {
     background-color: #fff;
     line-height: 44px;
     height: 100rpx;
+    
 }
 
 /*输入框*/

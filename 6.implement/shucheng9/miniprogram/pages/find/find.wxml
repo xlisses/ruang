@@ -36,5 +36,5 @@
                   </view>
             </view>
       </view>
-      <button bindtap="OK" type='primary' style="top:30rpx">筛选 </button>
+      <button bindtap="ok" type='primary' style="top:30rpx">筛选 </button>
 </view>

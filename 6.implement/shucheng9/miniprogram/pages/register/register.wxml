@@ -7,7 +7,7 @@
             <!-- style="width: 20rpx; height: 80rpx; display: block; box-sizing: border-box; left: -319rpx; top: -80rpx; position: relative; background-color: transparent;background-image: url('/images/back.png'); background-size:65% 80%; background-repeat:no-repeat;background-position: center;"> -->
         </button>
     </view>
-    <view class="register-from" style="width: 568rpx; height: 673rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <view class="register-from">
         <!--学号-->
         <view class="inputview">
             <image class="nameimage" src="/images/userid.png"></image>

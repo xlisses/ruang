@@ -50,7 +50,7 @@ page{
     margin-right: 22px; 
     margin-top: 11px; 
     color: black; 
-    font-size: 18px
+    font-size: 18px;
    } 
      
    .line { 

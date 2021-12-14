@@ -34,7 +34,7 @@ Page({
       url: '/pages/qiugou/myqiugou'
     })
   },
-  onLoad() {
+  onShow() {
     qiugou.limit(8).where({
       Variety: 1, //求购供应类型
       UserId: db.command.neq(app.globalData.guserid), //不是自己求购的
@@ -55,7 +55,10 @@ Page({
     page = page + 3
 
     qiugou.limit(page).where({
-      Variety: 1
+      Variety: 1, //求购供应类型
+      UserId: db.command.neq(app.globalData.guserid), //不是自己求购的
+      Stock: db.command.gt(0), //需求大于0
+      State: 1 //未被下架
     }).get({
       success: res => {
         // res.data 包含该记录的数据
@@ -66,19 +69,6 @@ Page({
         })
       }
 
-    })
-  },
-  getuserprofile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-    wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
     })
   },
 

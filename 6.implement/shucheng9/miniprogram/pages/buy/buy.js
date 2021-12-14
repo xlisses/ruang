@@ -29,7 +29,6 @@ Page({
           price: res.data.Price,
           username: res.data.UserName,
           phone: res.data.PhoneNum
-
         })
 
       })
@@ -63,24 +62,31 @@ Page({
     wx.cloud.database().collection('book').doc(that.data.list._id).get({
       success: function (res) {
         if ((res.data.Stock - that.data.num) < 0) {
-          wx.showModal({
-            title: '库存不足',
-            content: '库存不足'
-          });
+          wx.showToast({
+            title: '超出数量上限',
+            icon: 'loading',
+            duration: 1000
+          })
+        }else if(that.data.num == 0){
+          wx.showToast({
+            title: '数量不能为0',
+            icon: 'loading',
+            duration: 1000
+          })
         } else {
           wx.cloud.database().collection('book').doc(that.data.list._id).update({
             data: {
-              Stock:res.data.Stock - that.data.num
+              Stock:res.data.Stock - parseInt(that.data.num)
             }
           })
           wx.cloud.database().collection('order').add({
             data: {
               BookName: that.data.bookname,
               Seller: that.data.username,
-              Price: that.data.price,
+              Price: parseFloat(that.data.price),
               Phone: that.data.phone,
               BookText: that.data.booktext,
-              Num: that.data.num,
+              Num: parseInt(that.data.num),
               State: 0,
             }
           })
@@ -104,47 +110,5 @@ Page({
         }
       }
     })
-    // wx.cloud.database().collection('order').add({
-
-    //   data: {
-    //     BookName: that.data.bookname,
-    //     Seller: that.data.username,
-    //     Prce: that.data.price,
-    //     Phone: that.data.phone,
-    //     BookText: that.data.booktext,
-    //     Num: that.data.num,
-    //     State: 0,
-    //   }
-
-    // })
-
-    // wx.cloud.database().collection('book').doc(that.data.list._id).update({
-    //   data: {
-    //     State: 1,
-    //   }
-    // })
-    // wx.showModal({
-    //   title: '购买成功',
-
-    //   showCancel: false, //是否显示取消按钮
-
-    //   cancelColor: 'skyblue', //取消文字的颜色
-    //   confirmText: "确定", //默认是“确定”
-    //   confirmColor: 'skyblue', //确定文字的颜色
-    //   success: function (res) {
-    //     if (res.confirm) {
-    //       wx.switchTab({
-    //         url: '../goumai/goumai',
-    //       })
-    //     }
-
-    //   }
-
-
-    // })
-
-    // that.setData({
-    //   booktext: '',
-    // })
   }
 })

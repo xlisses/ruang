@@ -10,13 +10,7 @@
         <text class="text">{{list.BookName}}</text>
     </view>
     <view class="line"></view>
-    <!--书籍编号-->
-    <view class="view">
-        <image class="image" src="/images/book.png"></image>
-        <label class="lab">书籍编号</label>
-        <text class="text">{{list.BookId}}</text>
-    </view>
-    <view class="line"></view> 
+
     <!--备注-->
     <view class="view">
         <text class="note" style="position: relative; left: 0rpx; top: 4rpx">{{list.BRptext}}</text>

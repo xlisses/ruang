@@ -14,3 +14,4 @@
 
 
 </view>
+<button bindtap="del"  type ="warn" style=" background-color: red;color:white;margin-top:90%">删除</button>
