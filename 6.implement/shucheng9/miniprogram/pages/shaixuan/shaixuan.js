@@ -38,100 +38,164 @@ Page({
 
     onLoad: function (options) {
         var that = this;
-          if(options.col!='所有学院'&&options.spe!='所有专业'){
-       let db= wx.cloud.database()
-         const _ =db.command
-         db.collection('book')
-         .where(_.and(
-              [{Price:_.gt(options.price1) },
-               {  price:_.lt(options.price2) },
-              {Variety: 0,} ,
-              {College:options.col,},
-             { Speciality:options.spe,},
-             {UserId: db.command.neq(app.globalData.guserid)},//不是自己卖的
-             {Stock: db.command.gt(0)}, //库存大于0
-              ]
-            ))
-        .get({
-            //如果查询成功的话
-            success: res => {
-                this.setData({
-                    list: res.data,
+        if (options.col != '所有学院' && options.spe != '所有专业') {
+
+            let db = wx.cloud.database()
+            const _ = db.command
+            db.collection('book')
+                .where(_.and(
+                    [{
+                            Price: _.gt(parseFloat(options.price1))
+                        },
+                        {
+                            Price: _.lt(parseFloat(options.price2))
+                        },
+                        {
+                            Variety: 0,
+                        },
+                        {
+                            College: options.col,
+                        },
+                        {
+                            Speciality: options.spe,
+                        },
+                        {
+                            UserId: db.command.neq(app.globalData.guserid)
+                        }, //不是自己卖的
+                        {
+                            Stock: db.command.gt(0)
+                        }, //库存大于0
+                        {
+                            State: 1
+                        }
+                    ]
+                ))
+                .get({
+                    //如果查询成功的话
+                    success: res => {
+                        this.setData({
+                            list: res.data,
+                        })
+
+                    }
                 })
 
-            }
-        })
-    }   
-    else if(options.col=='所有学院'&&options.spe!='所有专业'){
-        let db= wx.cloud.database()
-        const _ =db.command
-        db.collection('book')
-        .where(_.and(
-             [{Price:_.gt(options.price1) },
-              {  price:_.lt(options.price2) },
-             {Variety: 0,} ,
-           
-            { Speciality:options.spe,},
-            {UserId: db.command.neq(app.globalData.guserid)},//不是自己卖的
-            {Stock: db.command.gt(0)}, //库存大于0
-             ]
-           ))
-       .get({
-           //如果查询成功的话
-           success: res => {
-               this.setData({
-                   list: res.data,
-               })
+        } else if (options.col == '所有学院' && options.spe != '所有专业') {
+            let db = wx.cloud.database()
+            const _ = db.command
+            db.collection('book')
+                .where(_.and(
+                    [{
+                            Price: _.gt(parseFloat(options.price1))
+                        },
+                        {
+                            Price: _.lt(parseFloat(options.price2))
+                        },
+                        {
+                            Variety: 0,
+                        },
 
-           }
-       })
-    }
-    else if (options.col!='所有学院'&&options.spe=='所有专业'){
-        let db= wx.cloud.database()
-        const _ =db.command
-        db.collection('book')
-        .where(_.and(
-             [{Price:_.gt(options.price1) },
-              {  price:_.lt(options.price2) },
-             {Variety: 0,} ,
-             {College:options.col,},
-           
-            {UserId: db.command.neq(app.globalData.guserid)},//不是自己卖的
-            {Stock: db.command.gt(0)}, //库存大于0
-             ]
-           ))
-       .get({
-           //如果查询成功的话
-           success: res => {
-               this.setData({
-                   list: res.data,
-               })
+                        {
+                            Speciality: options.spe,
+                        },
+                        {
+                            UserId: db.command.neq(app.globalData.guserid)
+                        }, //不是自己卖的
+                        {
+                            Stock: db.command.gt(0)
+                        }, //库存大于0
+                        {
+                            State: 1
+                        }
+                    ]
+                ))
+                .get({
+                    //如果查询成功的话
+                    success: res => {
+                        this.setData({
+                            list: res.data,
+                        })
 
-           }
-       })
-    }
-    else{
-        let db= wx.cloud.database()
-        const _ =db.command
-        db.collection('book')
-        .where(_.and(
-             [{Price:_.gt(options.price1) },
-              {  price:_.lt(options.price2) },
-             {Variety: 0,} ,
-            
-            {UserId: db.command.neq(app.globalData.guserid)},//不是自己卖的
-            {Stock: db.command.gt(0)}, //库存大于0
-             ]
-           ))
-       .get({
-           //如果查询成功的话
-           success: res => {
-               this.setData({
-                   list: res.data,
-               })
+                    }
+                })
+        } else if (options.col != '所有学院' && options.spe == '所有专业') {
 
-           }
-       })
+            let db = wx.cloud.database()
+            const _ = db.command
+            db.collection('book')
+                .where(_.and(
+                    [{
+                            Price: _.gt(parseFloat(options.price1))
+                        },
+                        {
+                            Price: _.lt(parseFloat(options.price2))
+                        },
+                        {
+                            Variety: 0,
+                        },
+                        {
+                            College: options.col,
+                        },
+
+                        {
+                            UserId: db.command.neq(app.globalData.guserid)
+                        }, //不是自己卖的
+                        {
+                            Stock: db.command.gt(0)
+                        }, //库存大于0
+                        {
+                            State: 1
+                        }
+                    ]
+                ))
+                .get({
+                    //如果查询成功的话
+                    success: res => {
+                        this.setData({
+                            list: res.data,
+                        })
+
+                    }
+                })
+
+
+
+        } else {
+
+            let db = wx.cloud.database()
+            const _ = db.command
+            db.collection('book')
+                .where(_.and(
+                    [{
+                            Price: _.gt(parseFloat(options.price1))
+                        },
+                        {
+                            Price: _.lt(parseFloat(options.price2))
+                        },
+                        {
+                            Variety: 0,
+                        },
+
+                        {
+                            UserId: _.neq(app.globalData.guserid)
+                        }, //不是自己卖的
+                        {
+                            Stock: _.gt(0)
+                        }, //库存大于0
+                        {
+                            State: 1
+                        }
+                    ]
+                ))
+                .get({
+                    //如果查询成功的话
+                    success: res => {
+                        this.setData({
+                            list: res.data,
+                        })
+
+                    }
+                })
+        }
     }
-}
 })

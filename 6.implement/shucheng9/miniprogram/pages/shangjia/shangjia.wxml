@@ -1,11 +1,8 @@
 <!--pages/shangjia/shangjia.wxml-->
-
-
 <view class='bg' style="width: 750rpx; height: 60rpx; display: block; box-sizing: border-box;background-color: transparent;">
 
 <text  style="display: flex; text-align: center; justify-content: center; width: 750rpx; height: 59rpx; box-sizing: border-box; margin-top: 10px">上架商品信息</text>
 </view>
-
 <view class='main row' style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box">
   <image class='left icon' src='/images/user.png'></image>
   <input class='input' bindinput='nameinput' placeholder='名称'></input>
@@ -35,11 +32,6 @@
     </view>
 </view>
 
-
-
-
-
-
 </view>
 <view class='line' ></view>
 
@@ -50,14 +42,12 @@
         <text class='select_text'>{{selectData2[index2]}}</text>
         <image class='select_img {{selectShow2&&"select_img_rotate"}}' src='../../images/select_img.png'  background-size="contain"></image> 
     </view>
-    <cover-view class='option_box' style='height:{{selectShow2?(selectData2.length>5?325:selectData2.length*50):0}}rpx;'>
+    <view class='option_box' style='height:{{selectShow2?(selectData2.length>5?325:selectData2.length*50):0}}rpx;'>
         <text class='option' wx:for='{{selectData2}}' wx:key='this' data-index='{{index}}' catchtap='optionTap2'>{{item}}</text>
-    </cover-view>
+    </view>
 </view>
-
 </view>
 <view class='line'></view>
-
 
 <view class='main row'>
   <image class='left icon' src='/images/num.png'></image>
@@ -65,16 +55,11 @@
 </view>
 <view class='line'></view>
 
-
-
 <view class='main row'>
   <image class='left icon' src='/images/pic.png'></image>
   
   <button  bindtap='bokimg'  style="width: 40%; height: 80rpx; display: block; box-sizing: border-box; left: -177rpx; top: 15%; position: relative;background-color: rgb(216, 232, 233);"><text class="txt">上传图片</text></button>
 </view>
-
-
-
 <button class='sureBtn' type='primary' bindtap='sureTap' style="position: fixed; left: 20%; top: 80%; width: 60%; height: 5%; display: block; box-sizing: border-box">确定上架</button>
 
 
