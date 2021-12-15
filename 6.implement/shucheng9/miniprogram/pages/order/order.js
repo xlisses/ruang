@@ -19,8 +19,6 @@ Page({
   },
 
   shouhuo: function (e) {
-
-
     wx.cloud.database().collection('order').doc(e.currentTarget.dataset.id).update({
       data: {
         State: 1,
@@ -41,10 +39,7 @@ Page({
         }
       }
     })
-
   },
-
-
 
   dtl: function (e) {
 
@@ -62,17 +57,14 @@ Page({
       }).collection('order')
       .where({
         State: 0,
-        UserId: db.command.neq(app.globalData.guserid)
+        UserId: db.command.eq(app.globalData.guserid)
       })
-
       .get({
         //如果查询成功的话
         success: res => {
-
           this.setData({
             list: res.data,
           })
-
         }
       })
 

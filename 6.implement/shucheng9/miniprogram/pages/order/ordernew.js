@@ -25,7 +25,8 @@ Page({
     var that = this;
     wx.cloud.database().collection('order')
       .where({
-        State: 1
+        State: 1,
+        UserId: db.command.eq(app.globalData.guserid)
       })
 
       .get({
