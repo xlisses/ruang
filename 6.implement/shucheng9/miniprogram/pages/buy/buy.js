@@ -9,6 +9,7 @@ Page({
     phone: '',
     booktext: '',
     num: 0,
+    variety: 0,
   },
 
   /**
@@ -28,7 +29,8 @@ Page({
           bookname: res.data.BookName,
           price: res.data.Price,
           username: res.data.UserName,
-          phone: res.data.PhoneNum
+          phone: res.data.PhoneNum,
+          variety: res.data.Variety
         })
 
       })
@@ -67,7 +69,7 @@ Page({
             icon: 'loading',
             duration: 1000
           })
-        }else if(that.data.num == 0){
+        } else if (that.data.num == 0) {
           wx.showToast({
             title: '数量不能为0',
             icon: 'loading',
@@ -76,20 +78,37 @@ Page({
         } else {
           wx.cloud.database().collection('book').doc(that.data.list._id).update({
             data: {
-              Stock:res.data.Stock - parseInt(that.data.num)
+              Stock: res.data.Stock - parseInt(that.data.num)
             }
           })
-          wx.cloud.database().collection('order').add({
-            data: {
-              BookName: that.data.bookname,
-              Seller: that.data.username,
-              Price: parseFloat(that.data.price),
-              Phone: that.data.phone,
-              BookText: that.data.booktext,
-              Num: parseInt(that.data.num),
-              State: 0,
-            }
-          })
+          if (that.data.variety == 1) {
+            wx.cloud.database().collection('order').add({
+              data: {
+                BookName: that.data.bookname,
+                Seller: that.data.username,
+                Price: parseFloat(that.data.price),
+                Phone: that.data.phone,
+                BookText: that.data.booktext,
+                Num: parseInt(that.data.num),
+                UserId: app.globalData.guserid,
+                State: 0,
+              }
+            })
+          } else {
+            wx.cloud.database().collection('order').add({
+              data: {
+                BookName: that.data.bookname,
+                Seller: app.globalData.guserid,
+                Price: parseFloat(that.data.price),
+                Phone: that.data.phone,
+                BookText: that.data.booktext,
+                Num: parseInt(that.data.num),
+                UserId: that.data.username,
+                State: 0,
+              }
+            })
+          }
+
           wx.showModal({
             title: '购买成功',
             showCancel: false, //是否显示取消按钮   
