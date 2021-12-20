@@ -15,6 +15,6 @@
 
 </view>
 <view class="goumai_detailbottom">
-  <button class="call" type="primary" bintap='call'>联系商家</button>
+  <button class="call" type="primary" bindtap="tosellerinfo">联系商家</button>
   <button class="offer" type="primary" data-id="{{list._id}}" bindtap='offer'>立即购买</button>
 </view>

@@ -1,4 +1,5 @@
 // pages/goumai_detail/goumai_detail.js
+var uid
 Page({
   data: {
     list:[]
@@ -24,6 +25,7 @@ Page({
      
       .get()
       .then(res => {
+        uid=res.data.UserId
         this.setData({
           list: res.data
         })
@@ -37,7 +39,11 @@ Page({
 
 
   },
-
+  tosellerinfo:function(params){
+    wx.navigateTo({
+      url: '/pages/sellerinfo/sellerinfo?id='+uid
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

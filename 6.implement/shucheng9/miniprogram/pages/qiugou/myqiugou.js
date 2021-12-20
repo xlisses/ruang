@@ -51,8 +51,8 @@ Page({
   onPullDownRefresh: function () {
     console.log(123)
     qiugou.where({
-      UserId: app.globalData.guserid
-
+      UserId: app.globalData.guserid,
+      Variety: 1,
     }).get({
       success: res => {
         // res.data 包含该记录的数据

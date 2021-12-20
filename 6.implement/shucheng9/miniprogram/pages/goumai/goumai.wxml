@@ -26,7 +26,7 @@
 
   <view class="vw" bindtap='dtl' data-id="{{item._id}}" style="width: 743rpx; height: 239rpx; display: block; box-sizing: border-box; ">
     <view for="" class="bokimg" style="width: 246rpx; height: 200rpx; display: block; box-sizing: border-box;background-color: black;">
-      <image src="{{item.BookImg}}" style="width: 248rpx; height: 209rpx; display: inline-block; box-sizing: border-box"></image>
+      <image src="{{item.BookImg[0]}}" style="width: 248rpx; height: 209rpx; display: inline-block; box-sizing: border-box"></image>
     </view>
     <view for="" class="bokname" style="position: relative; left: 272rpx; top: -193rpx; font-size: 20px; width: 246rpx; height: 37rpx; display: block; box-sizing: border-box">{{item.BookName}}</view>
 

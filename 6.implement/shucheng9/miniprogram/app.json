@@ -28,13 +28,14 @@
     "pages/qiugou_detail/qiugou_detail",
     "pages/register/register",
     "pages/report/report",
+    "pages/sellerinfo/sellerinfo",
     "pages/shaixuan/shaixuan",
     "pages/shangjia/shangjia",
     "pages/shoumai/shoumai",
     "pages/shoumai_dtl/shoumai_dtl",
+    "pages/userreport/userreport",
     "pages/xiugai/xiugai",
     "pages/logs/logs"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -46,35 +47,34 @@
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "tabBar": {
-  "color": "#a9b7b7",
-  "selectedColor": "#11cd6e",
-  "borderStyle": "white",
-  "list": [
-    {
-      "selectedIconPath": "images/goumai.png",
-      "iconPath": "images/goumai.png",
-      "pagePath": "pages/goumai/goumai",
-      "text": "购买"
-    },
-    {
-      "selectedIconPath": "images/shoumai.png",
-      "iconPath": "images/shoumai.png",
-      "pagePath": "pages/shoumai/shoumai",
-      "text": "售卖"
-    },
-    {
-      "selectedIconPath": "images/qiugou.png",
-      "iconPath": "images/qiugou.png",
-      "pagePath": "pages/qiugou/qiugou",
-      "text": "求购"
-    },
-    {
-      "selectedIconPath": "images/gerenzhongxin.png",
-      "iconPath": "images/gerenzhongxin.png",
-      "pagePath": "pages/my/my",
-      "text": "个人中心"
-    }
-  ]
-}
-
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/goumai.png",
+        "iconPath": "images/goumai.png",
+        "pagePath": "pages/goumai/goumai",
+        "text": "购买"
+      },
+      {
+        "selectedIconPath": "images/shoumai.png",
+        "iconPath": "images/shoumai.png",
+        "pagePath": "pages/shoumai/shoumai",
+        "text": "售卖"
+      },
+      {
+        "selectedIconPath": "images/qiugou.png",
+        "iconPath": "images/qiugou.png",
+        "pagePath": "pages/qiugou/qiugou",
+        "text": "求购"
+      },
+      {
+        "selectedIconPath": "images/gerenzhongxin.png",
+        "iconPath": "images/gerenzhongxin.png",
+        "pagePath": "pages/my/my",
+        "text": "个人中心"
+      }
+    ]
+  }
 }
