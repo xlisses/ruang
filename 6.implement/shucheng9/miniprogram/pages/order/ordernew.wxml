@@ -8,7 +8,8 @@
 <image for="" class="bokimg" src="{{item.BookImg}}"></image>
 <view for="" class="bokname" >{{item.BookName}}</view>
 <view for="" class="price" >￥{{item.Price}}</view>
-<button  class='shouhuo'  type='default' style="width: 30%;">已收货</button>
+<view for="" class="bokname" >{{item.Variety}}</view>
+<button  class='shouhuo'  type='default' style="width: 30%;">已完成</button>
 
 
 </view>

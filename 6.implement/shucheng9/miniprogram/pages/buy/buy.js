@@ -1,5 +1,5 @@
 // pages/buy/buy.js
-
+var app = getApp();
 Page({
   data: {
     list: [],
@@ -30,7 +30,9 @@ Page({
           price: res.data.Price,
           username: res.data.UserName,
           phone: res.data.PhoneNum,
-          variety: res.data.Variety
+          variety: res.data.Variety,
+          userid:id,
+          bookimg:res.data.BookImg
         })
 
       })
@@ -81,36 +83,42 @@ Page({
               Stock: res.data.Stock - parseInt(that.data.num)
             }
           })
-          if (that.data.variety == 1) {
+          if (that.data.variety == 0) {
             wx.cloud.database().collection('order').add({
               data: {
                 BookName: that.data.bookname,
                 Seller: that.data.username,
+                SellerId:that.data.userid,
                 Price: parseFloat(that.data.price),
                 Phone: that.data.phone,
                 BookText: that.data.booktext,
                 Num: parseInt(that.data.num),
                 UserId: app.globalData.guserid,
                 State: 0,
+                BookImg:that.data.bookimg,
+                Variety:"购买/售卖"
               }
             })
           } else {
             wx.cloud.database().collection('order').add({
               data: {
                 BookName: that.data.bookname,
-                Seller: app.globalData.guserid,
+                Seller: app.globalData.gusername,
+                SellerId:app.globalData.guserid,
                 Price: parseFloat(that.data.price),
                 Phone: that.data.phone,
                 BookText: that.data.booktext,
                 Num: parseInt(that.data.num),
                 UserId: that.data.username,
                 State: 0,
+                BookImg:that.data.bookimg,
+                Variety:"求购/供应"
               }
             })
           }
 
           wx.showModal({
-            title: '购买成功',
+            title: '交易成功',
             showCancel: false, //是否显示取消按钮   
             cancelColor: 'skyblue', //取消文字的颜色
             confirmText: "确定", //默认是“确定”

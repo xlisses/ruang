@@ -10,7 +10,6 @@ var app = getApp();
 Page({
   data: {
     list: [],
-
   },
   yesfin: function (e) {
     wx.redirectTo({
@@ -55,10 +54,15 @@ Page({
     wx.cloud.database({
         env: "shucheng-0gpblg8515636a51"
       }).collection('order')
-      .where({
-        State: 0,
-        UserId: db.command.eq(app.globalData.guserid)
-      })
+      .where(db.command.or([{
+          State: 0,
+          UserId: db.command.eq(app.globalData.guserid)
+        },
+        {
+          State: 0,
+          SellerId: db.command.eq(app.globalData.guserid)
+        }
+      ]))
       .get({
         //如果查询成功的话
         success: res => {

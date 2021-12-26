@@ -54,6 +54,7 @@ Page({
           if (res.data[0].State == 1) {
             if (res.data[0].Pwd == that.data.password) {
               app.globalData.guserid = res.data[0]._id
+              app.globalData.gusername = res.data[0].UserName
               wx.switchTab({
                 url: '../goumai/goumai',
               })

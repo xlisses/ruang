@@ -7,8 +7,9 @@
 <view class="vw"   bindtap='dtl' data-id="{{item._id}}" >
 <image for="" class="bokimg" src="{{item.BookImg}}"></image>
 <view for="" class="bokname" >{{item.BookName}}</view>
-<view for="" class="price" >￥{{item.Price}}</view>
-<button  class='shouhuo' data-id="{{item._id}}"catchtap ='shouhuo' type='primary' style="width: 30%;">确认收货</button>
+<view for="" class="price">￥{{item.Price}}</view>
+<view for="" class="bokname" >{{item.Variety}}</view>
+<button  class='shouhuo' data-id="{{item._id}}"catchtap ='shouhuo' type='primary' style="width: 30%;">确认完成</button>
 
 
 </view>
