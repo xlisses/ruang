@@ -13,7 +13,7 @@ Page({
         success: false,
         selectShow1: false,//控制下拉列表的显示隐藏，false隐藏、true显示
         selectShow2: false,//控制下拉列表的显示隐藏，false隐藏、true显示
-        selectData1: ['所有学院','计算','法学' ,'医学'],//下拉列表的数据
+        selectData1: ['所有学院','计算机与计算科学','法学' ,'医学'],//下拉列表的数据
         selectData2:['所有专业','软工','大数据','计算机'],
         index1: 0,//选择的下拉列表下标
         index2:0,

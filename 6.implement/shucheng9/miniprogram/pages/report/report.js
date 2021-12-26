@@ -16,7 +16,8 @@ Page({
   data: {
     bookname:"",
     username:"",
-    bookprice:""
+    bookprice:"",
+    bookimg:""
   },
 
   /**
@@ -32,7 +33,8 @@ Page({
         this.setData({
           bookname:res.data.BookName,
           username:res.data.UserName,
-          bookprice:res.data.Price
+          bookprice:res.data.Price,
+          bookimg:res.data.BookImg
         })
       }
       
@@ -55,7 +57,9 @@ Page({
         BookId:id,
         BookName:bookname,
         BRptext:text,
-        State:1
+        State:1,
+        BookImg:this.data.bookimg,
+        Price:parseFloat(this.data.bookprice)
       },
       success:function(params) {
         wx.showToast({

@@ -20,6 +20,7 @@
     "pages/my/myxiugaiinfo",
     "pages/my/us",
     "pages/order/order",
+    "pages/order_detail/order_detail",
     "pages/order/ordernew",
     "pages/qiugou/addqiugou",
     "pages/qiugou/myqiugou",

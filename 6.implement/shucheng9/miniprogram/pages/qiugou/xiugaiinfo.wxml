@@ -8,22 +8,20 @@
   <image class='left icon' src='/images/user.png'></image>
   <input class='input' bindinput='nameinput' value="{{Name}}"></input>
 </view>
-
 <view class='line'></view>
 
 <view class='main row'>
   <image class='left icon' src='/images/money.png'></image>
- 
- 
   <input class='input' bindinput='priceinput' value="{{Price}}"></input>
 </view>
-
 <view class='line'></view>
+
 <view class='main row'>
   <image class='left icon' src='/images/goumai.png'></image>
   <input class='input' bindinput='numinput' placeholder='数量' value="{{Num}}"></input>
 </view>
 <view class='line'></view>
+
 <view class='main row'>
   <image class='left icon' src='/images/imagesst.png'></image>
   <input class='input' bindinput='textinput' value="{{Text}}" ></input>

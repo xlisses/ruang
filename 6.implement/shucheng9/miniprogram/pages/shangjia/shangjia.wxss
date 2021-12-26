@@ -31,7 +31,7 @@
 .input{
   margin-left: 30rpx;
   font-size: 32rpx;
-  color: rgb(197, 192, 192);
+  color: black;
   flex-grow: 1;
 }
 .line{

@@ -1,3 +1,12 @@
+wx.cloud.init({
+  env: 'shucheng-0gpblg8515636a51', //数据库ID
+  traceUser: true
+})
+const db = wx.cloud.database({
+  env: "shucheng-0gpblg8515636a51"
+})
+const user = db.collection("user")
+var app = getApp();
 Page({
   data: {
     list: [],
@@ -24,10 +33,15 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.cloud.database().collection('order')
-      .where({
-        State: 1,
-        UserId: db.command.eq(app.globalData.guserid)
-      })
+    .where(db.command.or([{
+      State: 1,
+      UserId: db.command.eq(app.globalData.guserid)
+    },
+    {
+      State: 1,
+      SellerId: db.command.eq(app.globalData.guserid)
+    }
+  ]))
 
       .get({
         //如果查询成功的话

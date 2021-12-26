@@ -47,17 +47,17 @@
    background-color: black;
  }
  .bokname{
-   position: relative; 
-   left: 38%; 
-   top: -179rpx; 
-   font-size: 20px;
- }
- .price{
-   position: relative; 
-   left: 40%; 
-   top: -141rpx;
-   font-size: 25px;
- }
+  position: relative; 
+  left: 40%; 
+  top: -75%; 
+  font-size: 20px;
+}
+.price{
+  position: relative; 
+  left: 40%; 
+  top: -75%;
+  font-size: 25px;
+}
  .shouhuo{
    position: relative; 
    left: 30%; 

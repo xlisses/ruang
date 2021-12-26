@@ -33,7 +33,7 @@
     <view for="" class="price" style="position: relative; left: 272rpx; top: -141rpx; width: 246rpx; height: 46rpx; display: block; box-sizing: border-box">￥{{item.Price}}</view>
 
     <view for="" class="usrname" style="position: relative; left: 538rpx; top: -276rpx; width: 153rpx; height: 46rpx; display: block; box-sizing: border-box;font-size: 20px;">{{item.UserName}}</view>
-    <button bindtap='goumai' data-id="{{item._id}}" style="background-color: rgb(132, 189, 236);position: relative; left: 243rpx; top: -244rpx; width: 153rpx; height: 71rpx; display: block; box-sizing: border-box;font-size: 24rpx;">购买</button>
+    <button bindtap='goumai' data-id="{{item._id}}" style="background-color: rgb(132, 189, 236);position: relative; left: 243rpx; top: -244rpx; width: 153rpx; height: 71rpx; display: block; box-sizing: border-box;font-size: 30rpx;">购买</button>
     <view for="" class="stk" style="position: relative; left: 524rpx; top: -230rpx; width: 130rpx; height: 46rpx; display: block; box-sizing: border-box">库存{{item.Stock}}</view>
     <view for="" class="col" style="position: relative; left: 272rpx; top: -276rpx; width: 153rpx; height: 37rpx; display: block; box-sizing: border-box">{{item.College}}</view>
 

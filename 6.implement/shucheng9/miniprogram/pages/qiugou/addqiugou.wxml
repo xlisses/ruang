@@ -7,22 +7,20 @@
   <image class='left icon' src='/images/user.png'></image>
   <input class='input' bindinput='nameinput' placeholder='名称'></input>
 </view>
-
 <view class='line'></view>
 
 <view class='main row'>
   <image class='left icon' src='/images/money.png'></image>
- 
- 
   <input class='input' bindinput='priceinput' placeholder='价格'></input>
 </view>
-
 <view class='line'></view>
+
 <view class='main row'>
   <image class='left icon' src='/images/goumai.png'></image>
   <input class='input' bindinput='numinput' placeholder='数量'></input>
 </view>
 <view class='line'></view>
+
 <view class='main row'>
   <image class='left icon' src='/images/imagesst.png'></image>
   <input class='input' bindinput='textinput' placeholder='求购条件'></input>

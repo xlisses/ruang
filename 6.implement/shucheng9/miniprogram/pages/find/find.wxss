@@ -49,7 +49,7 @@
 
 .input{
     font-size: 30rpx;
-    color: gray;
+    color: black;
     flex-grow: 1;
     border: 3rpx solid black;
     position: relative;
