@@ -12,7 +12,7 @@
 
 <view class="reportitems" wx:for="{{list}}" wx:key="id" bindtap='dtl' data-id="{{item._id}}">
     <view class="reportimg">
-        <img src= "{{item.BookImg}}" alt="详情" />
+        <image src= "{{item.AvaTor}}" alt="详情" style="width: 100%; height: 100%; display: inline-block; box-sizing: content-box"></image>
     </view>
     <view class="reportinfo">
         <view class="reportname">

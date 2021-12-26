@@ -48,14 +48,14 @@
 }
 .bokname{
   position: relative; 
-  left: 38%; 
-  top: -179rpx; 
+  left: 40%; 
+  top: -75%; 
   font-size: 20px;
 }
 .price{
   position: relative; 
   left: 40%; 
-  top: -141rpx;
+  top: -75%;
   font-size: 25px;
 }
 .shouhuo{
