@@ -48,6 +48,7 @@ Page({
     var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
 
   },
+  //读取
   txtinput: function (e) {
     this.setData({
       booktext: e.detail.value
@@ -59,7 +60,7 @@ Page({
       num: e.detail.value
     })
   },
-
+  // 下订单
   ok: function (e) {
     var that = this;
     // var date = util;
