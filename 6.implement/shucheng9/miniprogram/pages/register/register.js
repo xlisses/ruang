@@ -73,7 +73,7 @@ Page({
                 UserName: that.data.nickname,
                 PhoneNum: that.data.phone,
                 UserAddress: that.data.address,
-                Propeety: 0,
+                Property: 0,
                 State: 1
               }
             })

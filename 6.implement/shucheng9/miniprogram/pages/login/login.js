@@ -99,7 +99,7 @@ Page({
               content: '该用户不存在'
             });
           }
-          if (res.data[0].Propeety == 1) {
+          if (res.data[0].Property == 1) {
             if (res.data[0].State == 1) {
               if (res.data[0].Pwd == that.data.password) {
                 app.globalData.gadminid = res.data[0]._id
